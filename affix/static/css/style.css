@@ -85,11 +85,11 @@ nav img {
 }
 
 .webp header {
-  background-image: url(../img/header.webp);
+  background-image: url(../img/header2.webp);
 }
 
 .no-webp header {
-  background-image: url(../img/header.jpeg);
+  background-image: url(../img/header2.jpg);
 }
 
 div.call-to h1 {
