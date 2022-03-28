@@ -203,11 +203,16 @@ div.services h2 {
 
 div.services .small {
   font-size: 16px;
-  color: #505050;
+  color: #2d00f7;
 }
 
-div.services .plus {
-  font-size: 70px;
+.new {
+  position: relative;
+  top: 30px;
+  left: 720px;
+  transform: rotate(35deg);
+  font-size: 15px;
+  margin-top: -15px;
 }
 
 /****** CUSTOMERS ******/
@@ -547,6 +552,10 @@ footer div.overlay {
   div.services p.small {
     font-size: 13px;
   }
+  .new {
+    top: 5px;
+    left: 265px;
+  }
   .tooltip {
     display: none;
   }
@@ -701,6 +710,10 @@ footer div.overlay {
   div.services p.small {
     font-size: 14px;
   }
+  .new {
+    top: 10px;
+    left: 305px;
+  }
   .tooltip {
     display: none;
   }
@@ -845,6 +858,10 @@ footer div.overlay {
   div.services p.small {
     font-size: 15px;
   }
+  .new {
+    top: 15px;
+    left: 400px;
+  }
   .tooltip {
     display: none;
   }
@@ -947,6 +964,10 @@ footer div.overlay {
   div.services h2 {
     font-size: 20px;
   }
+  .new {
+    top: 25px;
+    left: 530px;
+  }
   /****** CUSTOMERS ******/
   div.customers h3 {
     font-size: 22px;
@@ -1000,7 +1021,6 @@ footer div.overlay {
   div.services span.icons:hover {
     color: #fca053;
     transition: 0.6s;
-    width: 115px;
   }
   section.content a.button:hover {
     border: 1px solid #ff7f50;
@@ -1018,9 +1038,69 @@ footer div.overlay {
     background-color: #fff;
     transition: 0.6s;
   }
-  .zoom-in:hover {
-    transform: scale(1.2);
-    transition: all 0.4s ease-in-out;
+  button.ntb:hover {
+    color: #ff8c00;
+    background-color: #fff;
+    border: 1px solid #ff8c00;
+    transition: 0.6s;
+  }
+  footer span.icon-arrow:hover {
+    bottom: 58px;
+    transition: 0.6s;
+  }
+  footer div.overlay:hover {
+    background: rgba(0, 0, 221, 0.9);
+    transition: 0.6s;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.7px) {
+  /****** HEADER ******/
+  header {
+    background-attachment: fixed;
+  }
+  /****** CERTIFICATES ******/
+  .support {
+    display: none;
+  }
+  /****** SERVICES ******/
+  .new {
+    top: 25px;
+    left: 630px;
+  }
+  /****** HOVERS ******/
+  nav ul li a:hover {
+    color: #fd9135;
+    transition: 0.35s;
+  }
+  a.button:hover {
+    background: #fff;
+    color: #ff7500;
+    transition: 0.6s;
+  }
+  div.services div.overlay:hover {
+    background-color: #0077b6;
+    transition: 0.6s;
+  }
+  div.services span.icons:hover {
+    color: #fca053;
+    transition: 0.6s;
+  }
+  section.content a.button:hover {
+    border: 1px solid #ff7f50;
+  }
+  .links:hover {
+    color: #3f37c9;
+    transition: 0.6s;
+  }
+  .cookie a:hover {
+    color: #134e48;
+    transition: 0.6s;
+  }
+  .accept a:hover {
+    color: #212529;
+    background-color: #fff;
+    transition: 0.6s;
   }
   button.ntb:hover {
     color: #ff8c00;
@@ -1039,7 +1119,7 @@ footer div.overlay {
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   /****** HEADER ******/
   header {
     background-attachment: fixed;
@@ -1082,10 +1162,6 @@ footer div.overlay {
     background-color: #fff;
     transition: 0.6s;
   }
-  .zoom-in:hover {
-    transform: scale(1.2);
-    transition: all 0.4s ease-in-out;
-  }
   button.ntb:hover {
     color: #ff8c00;
     background-color: #fff;
@@ -1099,6 +1175,13 @@ footer div.overlay {
   footer div.overlay:hover {
     background: rgba(0, 0, 221, 0.9);
     transition: 0.6s;
+  }
+}
+
+@media (min-width: 1500px) {
+  .zoom-in:hover {
+    transform: scale(1.2);
+    transition: all 0.4s ease-in-out;
   }
 }
 
