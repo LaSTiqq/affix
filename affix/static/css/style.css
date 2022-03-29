@@ -165,7 +165,7 @@ div.call-to p {
 }
 
 .modal-body ul li::before {
-  content: "";
+  content: '';
   background-image: url(../img/check.svg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -206,13 +206,17 @@ div.services .small {
   color: #2d00f7;
 }
 
+.sun {
+  margin-left: 80px;
+}
+
 .new {
-  position: relative;
-  top: 30px;
-  left: 720px;
+  display: inline-block;
   transform: rotate(35deg);
   font-size: 15px;
-  margin-top: -15px;
+  position: relative;
+  bottom: 20px;
+  right: 25px;
 }
 
 /****** CUSTOMERS ******/
@@ -232,7 +236,7 @@ div.customers h3 {
 .item-second::before,
 .item-third::before,
 .item-fourth::before {
-  content: "";
+  content: '';
   background-position: center center;
   background-size: cover;
   pointer-events: none;
@@ -280,23 +284,18 @@ button[data-bs-target="#carousel_2"] {
 /****** USEFUL ******/
 .useful ul li {
   list-style: none;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .useful ul li::before {
-  content: "";
+  content: '';
   background-image: url(../img/check.svg);
   background-repeat: no-repeat;
   background-position: center center;
   width: 16px;
-  height: 16px;
+  height: 22px;
   position: absolute;
-  left: 13px;
-  margin-top: 5px;
-}
-
-.useful ul li a {
-  font-size: 20px;
+  left: 10px;
 }
 
 /****** CONTACT ******/
@@ -552,10 +551,6 @@ footer div.overlay {
   div.services p.small {
     font-size: 13px;
   }
-  .new {
-    top: 5px;
-    left: 265px;
-  }
   .tooltip {
     display: none;
   }
@@ -710,10 +705,6 @@ footer div.overlay {
   div.services p.small {
     font-size: 14px;
   }
-  .new {
-    top: 10px;
-    left: 305px;
-  }
   .tooltip {
     display: none;
   }
@@ -858,10 +849,6 @@ footer div.overlay {
   div.services p.small {
     font-size: 15px;
   }
-  .new {
-    top: 15px;
-    left: 400px;
-  }
   .tooltip {
     display: none;
   }
@@ -964,10 +951,6 @@ footer div.overlay {
   div.services h2 {
     font-size: 20px;
   }
-  .new {
-    top: 25px;
-    left: 530px;
-  }
   /****** CUSTOMERS ******/
   div.customers h3 {
     font-size: 22px;
@@ -1062,11 +1045,6 @@ footer div.overlay {
   /****** CERTIFICATES ******/
   .support {
     display: none;
-  }
-  /****** SERVICES ******/
-  .new {
-    top: 25px;
-    left: 630px;
   }
   /****** HOVERS ******/
   nav ul li a:hover {
