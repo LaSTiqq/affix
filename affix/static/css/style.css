@@ -18,14 +18,13 @@ img {
   pointer-events: none;
 }
 
-nav ul li a,
 .button,
 div.services .overlay,
 div.services span.material-icons,
-.links,
 .ntb,
 .zoom-in,
-.accept a {
+.accept a,
+.cookie a {
   transition: 0.6s;
 }
 
@@ -59,6 +58,8 @@ nav ul li:first-child {
 nav ul li a {
   color: #fff;
   font-size: 19px;
+  font-weight: 600;
+  transition: 0.35s;
 }
 
 nav img {
@@ -96,11 +97,13 @@ div.call-to h1 {
   font-size: 66px;
   color: #f1faee;
   margin-top: 500px;
+  font-weight: 500;
 }
 
 div.call-to span {
   font-size: 72px;
   color: #111488;
+  font-weight: 600;
 }
 
 div.call-to p {
@@ -114,6 +117,7 @@ div.call-to p {
   color: #fff;
   background: #ff7500;
   font-size: 18px;
+  font-weight: 600;
   width: 215px;
   height: 50px;
   line-height: 48px;
@@ -145,12 +149,7 @@ div.call-to p {
 
 .content blockquote {
   font-size: 52px;
-}
-
-/****** LINKS ******/
-
-.links {
-  color: #675eff;
+  font-weight: 500;
 }
 
 /****** MODALS ******/
@@ -165,7 +164,7 @@ div.call-to p {
 }
 
 .modal-body ul li::before {
-  content: '';
+  content: "";
   background-image: url(../img/check.svg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -199,11 +198,12 @@ span.icons.last {
 
 div.services h2 {
   font-size: 24px;
+  font-weight: 400;
 }
 
-div.services .small {
+div.services p {
   font-size: 16px;
-  color: #2d00f7;
+  color: #343a40;
 }
 
 .sun {
@@ -222,21 +222,33 @@ div.services .small {
 /****** CUSTOMERS ******/
 
 div.customers h3 {
-  font-size: 24px;
+  font-size: 22px;
+  font-weight: 501;
 }
 
 /****** EXPERIENCE ******/
+
+.blockquote-footer span {
+  font-weight: 600;
+}
 
 .item {
   height: 245px;
   padding: 20px 70px 20px 200px;
 }
 
+.item-first,
+.item-second,
+.item-third,
+.item-fourth {
+  font-weight: 501;
+}
+
 .item-first::before,
 .item-second::before,
 .item-third::before,
 .item-fourth::before {
-  content: '';
+  content: "";
   background-position: center center;
   background-size: cover;
   pointer-events: none;
@@ -288,7 +300,7 @@ button[data-bs-target="#carousel_2"] {
 }
 
 .useful ul li::before {
-  content: '';
+  content: "";
   background-image: url(../img/check.svg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -429,11 +441,6 @@ footer div.overlay {
   z-index: 1000;
 }
 
-.cookie a {
-  color: #14213d;
-  transition: 0.6s;
-}
-
 .accept a {
   color: #fff;
 }
@@ -471,7 +478,8 @@ footer div.overlay {
   nav.fixed-top {
     position: initial;
   }
-  nav img {
+  nav img,
+  nav ul li a {
     margin: 0;
   }
   nav ul {
@@ -483,9 +491,6 @@ footer div.overlay {
   }
   nav ul li:nth-child(1) {
     margin-top: 0;
-  }
-  nav ul li a {
-    margin: 0;
   }
   nav ul li a:hover {
     color: #fff;
@@ -527,7 +532,7 @@ footer div.overlay {
   div.services h2 {
     font-size: 15px;
   }
-  div.services p.small {
+  div.services p {
     font-size: 13px;
   }
   .tooltip {
@@ -535,8 +540,7 @@ footer div.overlay {
   }
   /****** CUSTOMERS ******/
   div.customers h3 {
-    font-size: 14px;
-    height: 1.75em;
+    height: 2em;
   }
   button.carousel-control-prev,
   button.carousel-control-next {
@@ -565,6 +569,10 @@ footer div.overlay {
     width: 145px;
     height: 146px;
   }
+  /***** USEFUL ******/
+  .useful ul li::before {
+    left: 30px;
+  }
   /****** CONTACT ******/
   input[type="text"],
   input[type="email"],
@@ -572,12 +580,12 @@ footer div.overlay {
     width: 265px;
     height: 40px;
     font-size: 14px;
-	margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
   }
   textarea {
     height: 152px;
-	display: block;
+    display: block;
   }
   /****** FOOTER UPPER ******/
   section.footer h1 {
@@ -673,16 +681,13 @@ footer div.overlay {
   div.services h2 {
     font-size: 16px;
   }
-  div.services p.small {
+  div.services p {
     font-size: 14px;
   }
   .tooltip {
     display: none;
   }
   /****** CUSTOMERS ******/
-  div.customers h3 {
-    font-size: 19px;
-  }
   button.carousel-control-prev,
   button.carousel-control-next {
     display: none;
@@ -706,6 +711,10 @@ footer div.overlay {
   .item p {
     font-size: 13px;
   }
+  /***** USEFUL ******/
+  .useful ul li::before {
+    left: 30px;
+  }
   /****** CONTACT ******/
   input[type="text"],
   input[type="email"],
@@ -713,12 +722,12 @@ footer div.overlay {
     width: 366px;
     height: 40px;
     font-size: 15px;
-	margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
   }
   textarea {
     height: 152px;
-	display: block;
+    display: block;
   }
   /****** FOOTER UPPER ******/
   section.footer h1 {
@@ -809,16 +818,13 @@ footer div.overlay {
   div.services h2 {
     font-size: 17px;
   }
-  div.services p.small {
+  div.services p {
     font-size: 15px;
   }
   .tooltip {
     display: none;
   }
   /****** CUSTOMERS ******/
-  div.customers h3 {
-    font-size: 20px;
-  }
   button.carousel-control-prev,
   button.carousel-control-next {
     display: none;
@@ -842,16 +848,20 @@ footer div.overlay {
   .item p {
     font-size: 14px;
   }
+  /***** USEFUL ******/
+  .useful ul li::before {
+    left: 40px;
+  }
   /****** CONTACT ******/
   input[type="text"],
   input[type="email"],
   textarea {
     width: 333px;
-	margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
   }
   textarea {
-	display: block;
+    display: block;
   }
   /****** FOOTER UPPER ******/
   section.footer h1 {
@@ -911,13 +921,6 @@ footer div.overlay {
   div.services h2 {
     font-size: 20px;
   }
-  /****** CUSTOMERS ******/
-  div.customers h3 {
-    font-size: 22px;
-  }
-  div.customers p {
-    font-size: 17px;
-  }
   /****** CERTIFICATES ******/
   .support {
     display: none;
@@ -929,6 +932,10 @@ footer div.overlay {
   }
   .item p {
     font-size: 15px;
+  }
+  /***** USEFUL ******/
+  .useful ul li::before {
+    left: 50px;
   }
   /****** CONTACT ******/
   input[type="text"],
@@ -969,17 +976,9 @@ footer div.overlay {
     border: 1px solid #ff7f50;
   }
   button.ntb:hover {
-	background-color: #fff;
-	color: #ff8c00;
-	border: 1px solid #ff8c00;
-	transition: 0.6s;
-  }
-  .links:hover {
-    color: #3f37c9;
-    transition: 0.6s;
-  }
-  .cookie a:hover {
-    color: #134e48;
+    background-color: #fff;
+    color: #ff8c00;
+    border: 1px solid #ff8c00;
     transition: 0.6s;
   }
   .accept a:hover {
@@ -1028,17 +1027,9 @@ footer div.overlay {
     border: 1px solid #ff7f50;
   }
   button.ntb:hover {
-	background-color: #fff;
-	color: #ff8c00;
-	border: 1px solid #ff8c00;
-	transition: 0.6s;
-  }
-  .links:hover {
-    color: #3f37c9;
-    transition: 0.6s;
-  }
-  .cookie a:hover {
-    color: #134e48;
+    background-color: #fff;
+    color: #ff8c00;
+    border: 1px solid #ff8c00;
     transition: 0.6s;
   }
   .accept a:hover {
@@ -1088,17 +1079,9 @@ footer div.overlay {
     border: 1px solid #ff7f50;
   }
   button.ntb:hover {
-	background-color: #fff;
-	color: #ff8c00;
-	border: 1px solid #ff8c00;
-	transition: 0.6s;
-  }
-  .links:hover {
-    color: #3f37c9;
-    transition: 0.6s;
-  }
-  .cookie a:hover {
-    color: #134e48;
+    background-color: #fff;
+    color: #ff8c00;
+    border: 1px solid #ff8c00;
     transition: 0.6s;
   }
   .accept a:hover {

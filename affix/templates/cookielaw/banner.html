@@ -1,28 +1,24 @@
 {% load static %}
 <div id="CookielawBanner">
-    <div class="cookie fw-bold">
-        <div class="row">
-            <div class="col-12">
-                <div class="title">
-                    <h3>Cepumi</h3>
-                </div>
-            </div>
-			<div class="text-center">
-				<div class="col-12 text-dark">
-					<p class="mb-0">Informējam, ka šīs mājaslapas pilnvērtīgai darbībai tiek izmantotas sīkdatnes (angļu val.
-						"cookies"). Turpinot izmantot šo mājas lapu, Jūs piekrītat sīkdatņu izmantošanai.<br>
-					</p>
-				</div>
-				<div class="col-12">
-					<a target="_blank" rel="noreferrer" href="https://ec.europa.eu/info/cookies_lv"
-						class="fs-5 fw-bold">Kas ir "cookies"?</a>
-				</div>
-				<div class="col-12 accept">
-					<a href="javascript:Cookielaw.createCookielawCookie();" class="btn btn-dark mt-3">Piekrist un
-						aizvērt</a>
-				</div>
+	<div class="cookie">
+		<div class="row">
+			<div class="col-12">
+				<h3 class="title">Cepumi</h3>
 			</div>
-        </div>
-    </div>
+			<div class="col-12 text-center fw-bold">
+				<p class="text-dark mb-0">Informējam, ka šīs mājaslapas pilnvērtīgai darbībai tiek izmantotas sīkdatnes (angļu
+					val. "cookies"). Turpinot izmantot šo mājas lapu, Jūs piekrītat sīkdatņu izmantošanai.<br>
+				</p>
+			</div>
+			<div class="col-12 text-center">
+				<a target="_blank" rel="noreferrer" href="https://ec.europa.eu/info/cookies_lv" class="link-primary fw-bold">Kas
+					ir "cookies"?</a>
+			</div>
+			<div class="col-12 accept text-center">
+				<a href="javascript:Cookielaw.createCookielawCookie();" class="btn btn-dark mt-3">Piekrist un
+					aizvērt</a>
+			</div>
+		</div>
+	</div>
 </div>
 <script src="{% static 'js/cookielaw.js' %}"></script>
