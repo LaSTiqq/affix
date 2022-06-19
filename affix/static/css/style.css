@@ -1,23 +1,17 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
-
 /****** EXCEPTIONS ******/
-
 .modal-open {
   padding-right: 0 !important;
 }
-
 .btn:focus {
   box-shadow: none;
 }
-
 /****** COMMON ******/
-
 img {
   pointer-events: none;
 }
-
 .button,
 div.services .overlay,
 div.services span.material-icons,
@@ -27,55 +21,43 @@ div.services span.material-icons,
 .cookie a {
   transition: 0.6s;
 }
-
 /****** ANCHORS ******/
-
 a.anchor {
   display: block;
   position: relative;
   top: -87px;
   visibility: hidden;
 }
-
 /****** NAVBAR ******/
-
 nav {
   background-color: rgba(3, 117, 213, 0.7);
 }
-
 nav ul {
   margin-right: 80px;
 }
-
 nav ul li {
   margin-left: 28px;
 }
-
 nav ul li:first-child {
   margin-left: 0;
 }
-
 nav ul li a {
   color: #fff;
   font-size: 19px;
   font-weight: 600;
   transition: 0.35s;
 }
-
 nav img {
   width: 160px;
   height: 80px;
   transition: height 0.33s, width 0.33s;
   margin-left: 85px;
 }
-
 #logo_newy {
   width: 165px;
   height: 95px;
 }
-
 /****** HEADER ******/
-
 .webp header,
 .no-webp header {
   background-repeat: no-repeat;
@@ -84,35 +66,28 @@ nav img {
   background-blend-mode: multiply;
   height: 1050px;
 }
-
 .webp header {
   background-image: url(../img/header2.webp);
 }
-
 .no-webp header {
   background-image: url(../img/header2.jpg);
 }
-
 div.call-to h1 {
   font-size: 66px;
   color: #f1faee;
   margin-top: 500px;
   font-weight: 500;
 }
-
 div.call-to span {
   font-size: 72px;
   color: #111488;
   font-weight: 600;
 }
-
 div.call-to p {
   font-size: 24px;
   color: #2d00f7;
 }
-
 /****** BUTTONS ******/
-
 .button {
   color: #fff;
   background: #ff7500;
@@ -125,9 +100,7 @@ div.call-to p {
   opacity: 0.85;
   margin: 0 auto;
 }
-
 /****** BACKGROUND ******/
-
 .webp .background,
 .no-webp .background {
   background-image: url(../img/back_main.webp);
@@ -136,34 +109,34 @@ div.call-to p {
   background-attachment: fixed;
   padding-top: 20px;
 }
-
 .webp .background {
   background-image: url(../img/back_main.webp);
 }
-
 .no-webp .background {
   background-image: url(../img/back_main.jpg);
 }
-
 /****** HEADERS ******/
-
 .content blockquote {
   font-size: 52px;
   font-weight: 500;
 }
-
 /****** MODALS ******/
-
 .modal-body {
   padding: 1rem 1rem 0 1rem;
 }
-
-.modal-body ul li {
+#Modal1 .modal-body ul li,
+#Modal2 .modal-body ul li,
+#Modal3 .modal-body ul li,
+#Modal4 .modal-body ul li,
+#Modal5 .modal-body ul li {
   font-size: 15px;
   list-style: none;
 }
-
-.modal-body ul li::before {
+#Modal1 .modal-body ul li::before,
+#Modal2 .modal-body ul li::before,
+#Modal3 .modal-body ul li::before,
+#Modal4 .modal-body ul li::before,
+#Modal5 .modal-body ul li::before {
   content: "";
   background-image: url(../img/check.svg);
   background-repeat: no-repeat;
@@ -173,9 +146,7 @@ div.call-to p {
   position: absolute;
   left: 25px;
 }
-
 /****** SERVICES ******/
-
 div.services .overlay {
   background-color: #0096c7;
   width: 82px;
@@ -184,32 +155,26 @@ div.services .overlay {
   opacity: 0.8;
   margin: 0 auto;
 }
-
 span.icons {
   font-size: 54px;
   color: #2d00f7;
   margin-top: 7px;
 }
-
 span.icons.last {
   font-size: 54px;
   margin: 4px 0 0 4px;
 }
-
 div.services h2 {
   font-size: 24px;
   font-weight: 400;
 }
-
 div.services p {
   font-size: 16px;
   color: #343a40;
 }
-
 .sun {
   margin-left: 80px;
 }
-
 .new {
   display: inline-block;
   transform: rotate(35deg);
@@ -218,32 +183,25 @@ div.services p {
   bottom: 20px;
   right: 25px;
 }
-
 /****** CUSTOMERS ******/
-
 div.customers h3 {
   font-size: 22px;
   font-weight: 501;
 }
-
 /****** EXPERIENCE ******/
-
 .blockquote-footer span {
   font-weight: 600;
 }
-
 .item {
   height: 245px;
   padding: 20px 70px 20px 200px;
 }
-
 .item-first,
 .item-second,
 .item-third,
 .item-fourth {
   font-weight: 501;
 }
-
 .item-first::before,
 .item-second::before,
 .item-third::before,
@@ -256,62 +214,34 @@ div.customers h3 {
   height: 110px;
   border-radius: 50%;
 }
-
 .webp .item-first::before {
   background-image: url(../img/photo_1.webp);
 }
-
 .webp .item-second::before {
   background-image: url(../img/photo_2.webp);
 }
-
 .webp .item-third::before {
   background-image: url(../img/photo_3.webp);
 }
-
 .webp .item-fourth::before {
   background-image: url(../img/photo_4.webp);
 }
-
 .no-webp .item-first::before {
   background-image: url(../img/photo_1.jpg);
 }
-
 .no-webp .item-second::before {
   background-image: url(../img/photo_2.jpg);
 }
-
 .no-webp .item-third::before {
   background-image: url(../img/photo_3.jpg);
 }
-
 .no-webp .item-fourth::before {
   background-image: url(../img/photo_4.jpg);
 }
-
 button[data-bs-target="#carousel_2"] {
   width: 12%;
 }
-
-/****** USEFUL ******/
-.useful ul li {
-  list-style: none;
-  font-size: 18px;
-}
-
-.useful ul li::before {
-  content: "";
-  background-image: url(../img/check.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 16px;
-  height: 22px;
-  position: absolute;
-  left: 10px;
-}
-
 /****** CONTACT ******/
-
 input[type="text"],
 input[type="email"],
 textarea {
@@ -324,83 +254,66 @@ textarea {
   border-radius: 6px;
   padding-left: 17px;
 }
-
 textarea {
   height: 152px;
   resize: none;
   padding-top: 15px;
 }
-
 form img {
   cursor: pointer;
   pointer-events: all;
   display: block;
   margin: 0 auto 10px auto;
 }
-
 .ntb {
   color: #fff;
   background: #ff8c00;
   width: 85px;
   opacity: 0.9;
 }
-
 /****** FOOTER UPPER ******/
-
 .webp section.footer,
 .no-webp section.footer {
   background-position: center center;
   background-repeat: no-repeat;
   height: 636px;
 }
-
 .webp section.footer {
   background-image: url(../img/footer_up.webp);
 }
-
 .no-webp section.footer {
   background-image: url(../img/footer_up.jpg);
 }
-
 section.footer h1,
 section.footer span {
   color: #ff8c00;
 }
-
 section.footer h1 {
   font-size: 72px;
 }
-
 section.footer div.left p,
 section.footer div.right p,
 section.footer div.bottom p {
   color: #878787;
 }
-
 section.footer div.left p {
   font-size: 29px;
 }
-
 section.footer div.right p {
   font-size: 26px;
 }
-
 section.footer div.bottom p {
   font-size: 18px;
 }
-
 section.footer span.icons-bottom {
   font-size: 35px;
   color: #3f37c9;
   vertical-align: sub;
 }
-
 /****** FOOTER LOWER ******/
-
 footer {
   background: #000;
 }
-
 footer span.icon-arrow {
   color: #fff;
   font-size: 60px;
@@ -409,7 +322,6 @@ footer span.icon-arrow {
   right: 290px;
   transition: 0.6s;
 }
-
 footer div.overlay {
   display: none;
   background: rgba(0, 0, 221, 0.7);
@@ -420,13 +332,10 @@ footer div.overlay {
   right: 279px;
   transition: 0.6s;
 }
-
 /****** COOKIES ******/
-
 #CookielawBanner {
   transition: all 0.4s ease-out;
 }
-
 .cookie {
   color: #fff;
   position: fixed;
@@ -440,15 +349,12 @@ footer div.overlay {
   padding: 15px;
   z-index: 1000;
 }
-
 .accept a {
   color: #fff;
 }
-
 .title {
   margin-left: 45px;
 }
-
 .title::before {
   content: "";
   background-image: url(../img/cookie-icon.svg);
@@ -458,8 +364,6 @@ footer div.overlay {
   width: 33px;
   height: 33px;
 }
-
-/****** ADAPTIVE ******/
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
@@ -568,10 +472,6 @@ footer div.overlay {
   .logos img {
     width: 145px;
     height: 146px;
-  }
-  /***** USEFUL ******/
-  .useful ul li::before {
-    left: 30px;
   }
   /****** CONTACT ******/
   input[type="text"],
@@ -711,10 +611,6 @@ footer div.overlay {
   .item p {
     font-size: 13px;
   }
-  /***** USEFUL ******/
-  .useful ul li::before {
-    left: 30px;
-  }
   /****** CONTACT ******/
   input[type="text"],
   input[type="email"],
@@ -848,10 +744,6 @@ footer div.overlay {
   .item p {
     font-size: 14px;
   }
-  /***** USEFUL ******/
-  .useful ul li::before {
-    left: 40px;
-  }
   /****** CONTACT ******/
   input[type="text"],
   input[type="email"],
@@ -932,10 +824,6 @@ footer div.overlay {
   }
   .item p {
     font-size: 15px;
-  }
-  /***** USEFUL ******/
-  .useful ul li::before {
-    left: 50px;
   }
   /****** CONTACT ******/
   input[type="text"],
@@ -1107,7 +995,6 @@ footer div.overlay {
 }
 
 /****** GARLAND ******/
-
 .lightrope {
   text-align: center;
   white-space: nowrap;
