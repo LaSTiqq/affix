@@ -450,6 +450,10 @@ footer div.overlay {
   button.carousel-control-next {
     display: none;
   }
+  /****** CERTIFICATES ******/
+  .support {
+    display: none;
+  }
   /****** EXPERIENCE ******/
   .item {
     height: 435px;
@@ -592,6 +596,10 @@ footer div.overlay {
   button.carousel-control-next {
     display: none;
   }
+  /****** CERTIFICATES ******/
+  .support {
+    display: none;
+  }
   /****** EXPERIENCE ******/
   .item {
     height: 365px;
@@ -725,6 +733,10 @@ footer div.overlay {
   button.carousel-control-next {
     display: none;
   }
+  /****** CERTIFICATES ******/
+  .support-2 {
+    display: none;
+  }
   /****** EXPERIENCE ******/
   .item {
     display: block;
@@ -814,7 +826,7 @@ footer div.overlay {
     font-size: 20px;
   }
   /****** CERTIFICATES ******/
-  .support {
+  .support-2 {
     display: none;
   }
   /****** EXPERIENCE ******/
@@ -890,7 +902,7 @@ footer div.overlay {
     background-attachment: fixed;
   }
   /****** CERTIFICATES ******/
-  .support {
+  .support-2 {
     display: none;
   }
   /****** HOVERS ******/
@@ -942,7 +954,7 @@ footer div.overlay {
     background-attachment: fixed;
   }
   /****** CERTIFICATES ******/
-  .support {
+  .support-2 {
     display: none;
   }
   /****** HOVERS ******/

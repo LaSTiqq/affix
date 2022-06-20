@@ -2,6 +2,8 @@ window.onscroll = function () {
   scrollFunction();
 };
 
+const Modal6 = document.getElementById("Modal6");
+const help = document.getElementById("help");
 const logo_default = document.getElementById("logo_default");
 const logo_newy = document.getElementById("logo_newy");
 const logo_lv = document.getElementById("logo_lv");
@@ -9,7 +11,7 @@ const arrow = document.getElementById("arrow");
 
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-	arrow.style.display = "block";
+    arrow.style.display = "block";
     // End values
     if (logo_default) {
       logo_default.style.width = "110px";
@@ -24,7 +26,7 @@ function scrollFunction() {
       logo_lv.style.height = "60px";
     }
   } else {
-	arrow.style.display = "none";
+    arrow.style.display = "none";
     // Start values
     if (logo_default) {
       logo_default.style.width = "160px";
@@ -40,3 +42,13 @@ function scrollFunction() {
     }
   }
 }
+
+function scrollToAnchor(aid) {
+  let aTag = $("a[name='" + aid + "']");
+  $("html,body").animate({ scrollTop: aTag.offset().top }, "slow");
+}
+
+$("#help").click(function () {
+  $("#Modal6").modal("hide");
+  scrollToAnchor("certificates");
+});
