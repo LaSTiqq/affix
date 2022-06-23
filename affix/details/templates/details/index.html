@@ -450,12 +450,12 @@
 		<ul>
 			<li class="fs-5">Mikroģeneratora pieslēgšana <a target="_blank" 
 				href="https://sadalestikls.lv/lv/mikrogeneratora-pieslegsana" 
-				rel="noreferrer" class="link-primary text-decoration-none">sadalestikls.lv</a></li>
+				rel="noreferrer" class="link-primary text-decoration-none fw-bold">sadalestikls.lv</a></li>
 			<li class="fs-5">Mikroģeneratora pieslēgšanas pieteikums klientu portālā <a target="_blank" 
 				href="https://www.e-st.lv/lv/private/pieteikt-pakalpojumu/st-pieslegumi/mikrogeneratora-pieslegsana-1/jauna-mikrogeneratora-pieslegsana/step/1" 
-				rel="noreferrer" class="link-primary text-decoration-none">e-st.lv</a></li>
+				rel="noreferrer" class="link-primary text-decoration-none fw-bold">e-st.lv</a></li>
 			<li class="fs-5">SIA Energo dizains mājaslapa <a target="_blank" href="https://www.energodizains.lv/" 
-				rel="noreferrer" class="link-primary text-decoration-none">energodizains.lv</a></li>
+				rel="noreferrer" class="link-primary text-decoration-none fw-bold">energodizains.lv</a></li>
 		</ul>
 	</div>
     <!-- Contact us -->
@@ -468,7 +468,7 @@
             <figcaption class="blockquote-footer fs-4">Radās interese? Pajautā!</figcaption>
         </figure>
         <hr class="mt-lg-3 mt-xl-5">
-        <div class="row contacts g-0">
+        <div class="row">
             <div class="col-12">
                 {% for message in messages %}
                 <div class="container-fluid">
@@ -479,42 +479,35 @@
                 </div>
                 {% endfor %}
             </div>
-            <form method="post">
-                {% csrf_token %}
-                <div class="row">
-                    <div class="col-md-6">
-						<div data-aos="fade-right" data-aos-once="true" data-aos-duration="500" data-aos-offset="300">
-							<div class="mt-3">
-								{{ form.name }}
-							</div>
-						</div>
-						<div data-aos="fade-right" data-aos-once="true" data-aos-duration="500" data-aos-offset="250">
-							<div class="mt-3">
-								{{ form.sender }}
-							</div>
-						</div>
-						<div data-aos="fade-right" data-aos-once="true" data-aos-duration="500" data-aos-offset="150">
-							<div class="mt-3">
-								{{ form.subject }}
-							</div>
-						</div>
-                    </div>
-                    <div class="col-md-6 mt-3">
-                        <div data-aos="fade-left" data-aos-once="true" data-aos-duration="500" data-aos-offset="300">
-                            {{ form.content }}
-                        </div>
-                    </div>
-					<div class="col-md-12">
-						<div data-aos="fade-up" data-aos-once="true" data-aos-duration="500" data-aos-offset="150">
-							<h4 class="fw-bold text-center mt-3 fs-6">Pierādiet, ka neesat robots. Ievadiet atbildi</h4>
-							{{ form.captcha }}
-							<button type="submit" class="btn ntb d-block mx-auto my-3">Nosūtīt</button>
-						</div>
+		</div>
+		<form method="post" class="d-flex justify-content-center">
+			{% csrf_token %}
+			<div class="row">
+				<div class="col-md-6">
+					<div data-aos="fade-right" data-aos-once="true" data-aos-duration="500" data-aos-offset="300">
+						{{ form.name }}
 					</div>
-                </div>
-            </form>
-        </div>
-    </div>
+					<div data-aos="fade-right" data-aos-once="true" data-aos-duration="500" data-aos-offset="200">
+						{{ form.sender }}
+					</div>
+					<div data-aos="fade-right" data-aos-once="true" data-aos-duration="500" data-aos-offset="150">
+						{{ form.subject }}
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div data-aos="fade-left" data-aos-once="true" data-aos-duration="500" data-aos-offset="300">
+						{{ form.content }}
+					</div>
+				</div>
+				<div class="col-md-12 accept">
+					<div data-aos="fade-up" data-aos-once="true" data-aos-duration="500" data-aos-offset="100">
+						<h4 class="fw-bold text-center mt-3 fs-6">Pierādiet, ka neesat robots. Ievadiet atbildi</h4>
+						{{ form.captcha }}
+						<button type="submit" class="btn btn-dark d-block mx-auto my-3">Nosūtīt</button>
+					</div>
+				</div>
+			</div>
+		</form>
 </section>
 <!-- Modal 1 -->
 <div class="modal fade" id="Modal1">

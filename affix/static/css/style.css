@@ -15,9 +15,9 @@ img {
 .button,
 div.services .overlay,
 div.services span.material-icons,
-.ntb,
 .zoom-in,
 .accept a,
+.accept button,
 .cookie a {
   transition: 0.6s;
 }
@@ -245,31 +245,22 @@ button[data-bs-target="#carousel_2"] {
 input[type="text"],
 input[type="email"],
 textarea {
-  background: none;
-  font-size: 16px;
-  width: 500px;
+  background: none !important;
+  width: 500px !important;
   height: 40px;
-  border: 1px solid #ff7f50;
-  border-width: 2px;
-  border-radius: 6px;
-  padding-left: 17px;
+  border: 2px solid #ff7f50 !important;
+  border-radius: 6px !important;
 }
 textarea {
   height: 152px;
   resize: none;
-  padding-top: 15px;
+  padding-top: 15px !important;
 }
 form img {
   cursor: pointer;
   pointer-events: all;
   display: block;
   margin: 0 auto 10px auto;
-}
-.ntb {
-  color: #fff;
-  background: #ff8c00;
-  width: 85px;
-  opacity: 0.9;
 }
 /****** FOOTER UPPER ******/
 .webp section.footer,
@@ -349,7 +340,8 @@ footer div.overlay {
   padding: 15px;
   z-index: 1000;
 }
-.accept a {
+.accept a, 
+.accept button {
   color: #fff;
 }
 .title {
@@ -481,15 +473,8 @@ footer div.overlay {
   input[type="text"],
   input[type="email"],
   textarea {
-    width: 265px;
-    height: 40px;
-    font-size: 14px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  textarea {
-    height: 152px;
-    display: block;
+    width: 270px !important;
+	margin: 0 auto;
   }
   /****** FOOTER UPPER ******/
   section.footer h1 {
@@ -623,15 +608,8 @@ footer div.overlay {
   input[type="text"],
   input[type="email"],
   textarea {
-    width: 366px;
-    height: 40px;
-    font-size: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  textarea {
-    height: 152px;
-    display: block;
+    width: 370px !important;
+	margin: 0 auto;
   }
   /****** FOOTER UPPER ******/
   section.footer h1 {
@@ -760,12 +738,7 @@ footer div.overlay {
   input[type="text"],
   input[type="email"],
   textarea {
-    width: 333px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  textarea {
-    display: block;
+    width: 350px !important;
   }
   /****** FOOTER UPPER ******/
   section.footer h1 {
@@ -841,7 +814,7 @@ footer div.overlay {
   input[type="text"],
   input[type="email"],
   textarea {
-    width: 450px;
+    width: 450px !important;
   }
   /****** FOOTER UPPER ******/
   section.footer h1 {
@@ -875,13 +848,8 @@ footer div.overlay {
   section.content a.button:hover {
     border: 1px solid #ff7f50;
   }
-  button.ntb:hover {
-    background-color: #fff;
-    color: #ff8c00;
-    border: 1px solid #ff8c00;
-    transition: 0.6s;
-  }
-  .accept a:hover {
+  .accept a:hover
+  .accept button:hover {
     color: #212529;
     background-color: #fff;
     transition: 0.6s;
@@ -926,13 +894,8 @@ footer div.overlay {
   section.content a.button:hover {
     border: 1px solid #ff7f50;
   }
-  button.ntb:hover {
-    background-color: #fff;
-    color: #ff8c00;
-    border: 1px solid #ff8c00;
-    transition: 0.6s;
-  }
-  .accept a:hover {
+  .accept a:hover
+  .accept button:hover {
     color: #212529;
     background-color: #fff;
     transition: 0.6s;
@@ -978,13 +941,8 @@ footer div.overlay {
   section.content a.button:hover {
     border: 1px solid #ff7f50;
   }
-  button.ntb:hover {
-    background-color: #fff;
-    color: #ff8c00;
-    border: 1px solid #ff8c00;
-    transition: 0.6s;
-  }
-  .accept a:hover {
+  .accept a:hover,
+  .accept button:hover {
     color: #212529;
     background-color: #fff;
     transition: 0.6s;
