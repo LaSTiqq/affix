@@ -1,9 +1,9 @@
-var Cookielaw = {
+let Cookielaw = {
   ACCEPTED: "1",
   REJECTED: "0",
 
   createCookie: function (name, value, days) {
-    var date = new Date(),
+    let date = new Date(),
       expires = "";
     if (days) {
       date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);

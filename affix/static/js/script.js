@@ -2,12 +2,12 @@ window.onscroll = function () {
   scrollFunction();
 };
 
-const Modal6 = document.getElementById("Modal6");
-const help = document.getElementById("help");
 const logo_default = document.getElementById("logo_default");
 const logo_newy = document.getElementById("logo_newy");
 const logo_lv = document.getElementById("logo_lv");
 const arrow = document.getElementById("arrow");
+const Modal6 = document.getElementById("Modal6");
+const help = document.getElementById("help");
 
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -43,6 +43,24 @@ function scrollFunction() {
   }
 }
 
+// Captcha
+$('.captcha').click(function () {
+	$.getJSON("/captcha/refresh/", function (result) {
+		$('.captcha').attr('src', result['image_url']);
+		$('#id_captcha_0').val(result['key'])
+	});
+});
+
+// AOS
+AOS.init({
+	disable: window.innerWidth < 1360
+});
+
+// Tooltip
+[...document.querySelectorAll('[data-bs-toggle="tooltip"]')]
+.forEach(el => new bootstrap.Tooltip(el))
+
+// Scroll to certs
 function scrollToAnchor(aid) {
   let aTag = $("a[name='" + aid + "']");
   $("html,body").animate({ scrollTop: aTag.offset().top }, "slow");
@@ -51,4 +69,9 @@ function scrollToAnchor(aid) {
 $("#help").click(function () {
   $("#Modal6").modal("hide");
   scrollToAnchor("certificates");
+});
+
+// Hide navbar after click
+$('.navbar-collapse a').click(function(){
+	$(".navbar-collapse").collapse('hide');
 });
