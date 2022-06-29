@@ -53,8 +53,7 @@ nav img {
   height: 95px;
 }
 /****** HEADER ******/
-.webp header,
-.no-webp header {
+header {
   background-color: #c0bbba;
   background-blend-mode: multiply;
   height: 1050px;
@@ -324,6 +323,7 @@ form img {
 /****** PREFOOTER ******/
 .prefooter {
   height: 636px;
+  background-position: center center;
 }
 .webp .prefooter {
   background-image: url(../img/footer_up.webp);
@@ -332,7 +332,7 @@ form img {
   background-image: url(../img/footer_up.jpg);
 }
 .prefooter h1 {
-  font-size: 72px;
+  font-size: 70px;
   font-weight: bold;
   text-align: center;
 }
@@ -348,7 +348,7 @@ form img {
 }
 .prefooter .right,
 .prefooter .left {
-  font-size: 30px;
+  font-size: 28px;
 }
 .prefooter .bottom {
   font-size: 18px;
@@ -361,6 +361,9 @@ form img {
 /****** FOOTER ******/
 footer {
   background-color: #000;
+}
+footer p {
+  text-align: center;
 }
 footer .icon-arrow {
   color: #fff;
@@ -556,7 +559,7 @@ footer .overlay:hover {
     font-size: 26px;
   }
   /****** FOOTER ******/
-  footer .material-icons,
+  footer .icon-arrow,
   footer .overlay {
     display: none !important;
   }
@@ -667,7 +670,7 @@ footer .overlay:hover {
     font-size: 30px;
   }
   /****** FOOTER ******/
-  footer .material-icons,
+  footer .icon-arrow,
   footer .overlay {
     display: none !important;
   }
@@ -764,7 +767,7 @@ footer .overlay:hover {
     font-size: 32px;
   }
   /****** FOOTER ******/
-  footer .material-icons,
+  footer .icon-arrow,
   footer .overlay {
     display: none !important;
   }
@@ -786,8 +789,13 @@ footer .overlay:hover {
   textarea {
     width: 440px !important;
   }
+  /****** PREFOOTER ******/
+  .prefooter .right,
+  .prefooter .left {
+    font-size: 22px;
+  }
   /****** FOOTER ******/
-  footer .material-icons,
+  footer .icon-arrow,
   footer .overlay {
     display: none !important;
   }
@@ -800,18 +808,30 @@ footer .overlay:hover {
     transform: scale(1.2);
     transition: all 0.4s ease-in-out;
   }
-  /****** FOOTER ******/
-  footer .material-icons,
-  footer .overlay {
-    display: none !important;
+  /****** PREFOOTER ******/
+  .prefooter .right,
+  .prefooter .left {
+    font-size: 24px;
   }
 }
+
 /* Extra large devices (large desktops, 1400px and up) */
 @media (min-width: 1400px) {
   /****** CERTIFICATES ******/
   .zoom-in:hover {
     transform: scale(1.2);
     transition: all 0.4s ease-in-out;
+  }
+}
+
+/* Extra-extra large devices */
+@media (min-width: 1921px) {
+  /****** BACKGROUNDS ******/
+  header,
+  .background,
+  .prefooter {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 }
 
