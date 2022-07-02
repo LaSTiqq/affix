@@ -16,6 +16,7 @@
 
 # Self
 affix/templates/robots.txt
+affix/details/migrations
 affix/details/sitemaps.py
 affix/affix/settings.py
 affix/affix/urls.py
