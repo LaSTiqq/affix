@@ -59,10 +59,10 @@ header {
   height: 1050px;
 }
 .webp header {
-  background-image: url(../img/header2.webp);
+  background-image: url(../img/header.webp);
 }
 .no-webp header {
-  background-image: url(../img/header2.jpg);
+  background-image: url(../img/header.jpg);
 }
 .description h1 {
   color: #f1faee;
