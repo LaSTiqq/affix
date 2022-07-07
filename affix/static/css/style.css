@@ -85,7 +85,7 @@ header {
   text-align: center;
   width: 215px;
   display: block;
-  margin: -15px auto 0 auto;
+  margin: 0 auto;
   border-radius: 50rem;
   opacity: 0.85;
   transition: 0.5s;
