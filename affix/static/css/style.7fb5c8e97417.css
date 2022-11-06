@@ -84,10 +84,10 @@ header {
   height: 1050px;
 }
 .webp header {
-  background-image: url(../img/header.webp);
+  background-image: url("../img/header.99861817dc78.webp");
 }
 .no-webp header {
-  background-image: url(../img/header.jpg);
+  background-image: url("../img/header.c3322900d8bd.jpg");
 }
 .description h1 {
   color: #f1faee;
@@ -121,10 +121,10 @@ header {
   padding-top: 20px;
 }
 .webp .background {
-  background-image: url(../img/back_main.webp);
+  background-image: url("../img/back_main.7f42b0ba6900.webp");
 }
 .no-webp .background {
-  background-image: url(../img/back_main.jpg);
+  background-image: url("../img/back_main.bad606067219.jpg");
 }
 .text-plus-logo p,
 figure,
@@ -151,7 +151,7 @@ blockquote h1 {
 #Modal4 .modal-body ul li::before,
 #Modal5 .modal-body ul li::before {
   content: "";
-  background-image: url(../img/check.svg);
+  background-image: url("../img/check.5341028b07c9.svg");
   width: 16px;
   height: 16px;
   position: absolute;
@@ -254,28 +254,28 @@ blockquote h1 {
   border-radius: 50%;
 }
 .webp .item-first::before {
-  background-image: url(../img/photo_1.webp);
+  background-image: url("../img/photo_1.50a9c0edb09b.webp");
 }
 .webp .item-second::before {
-  background-image: url(../img/photo_2.webp);
+  background-image: url("../img/photo_2.473fa139ef22.webp");
 }
 .webp .item-third::before {
-  background-image: url(../img/photo_3.webp);
+  background-image: url("../img/photo_3.9c83e1abb435.webp");
 }
 .webp .item-fourth::before {
-  background-image: url(../img/photo_4.webp);
+  background-image: url("../img/photo_4.3111cf412f8a.webp");
 }
 .no-webp .item-first::before {
-  background-image: url(../img/photo_1.jpg);
+  background-image: url("../img/photo_1.dd9a572365be.jpg");
 }
 .no-webp .item-second::before {
-  background-image: url(../img/photo_2.jpg);
+  background-image: url("../img/photo_2.2dd3b778e75b.jpg");
 }
 .no-webp .item-third::before {
-  background-image: url(../img/photo_3.jpg);
+  background-image: url("../img/photo_3.ed767afe7438.jpg");
 }
 .no-webp .item-fourth::before {
-  background-image: url(../img/photo_4.jpg);
+  background-image: url("../img/photo_4.8925c3d0e9e8.jpg");
 }
 .blockquote-footer span {
   color: #343a40;
@@ -327,10 +327,10 @@ form img {
   height: 636px;
 }
 .webp .prefooter {
-  background-image: url(../img/footer_up.webp);
+  background-image: url("../img/footer_up.7569d3ca38c7.webp");
 }
 .no-webp .prefooter {
-  background-image: url(../img/footer_up.jpg);
+  background-image: url("../img/footer_up.54e543b42181.jpg");
 }
 .prefooter h1 {
   font-size: 70px;
@@ -409,7 +409,7 @@ footer .overlay:hover {
 }
 .cookie h3::before {
   content: "";
-  background-image: url(../img/cookie-icon.svg);
+  background-image: url("../img/cookie-icon.8a6fdcac8b55.svg");
   position: absolute;
   top: 15px;
   left: 15px;
