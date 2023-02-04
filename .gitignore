@@ -15,11 +15,11 @@
 *.wmv
 
 # Self
-affix/templates/robots.txt
-affix/details/migrations
-affix/details/sitemaps.py
-affix/affix/settings.py
-affix/affix/urls.py
-affix/affix/static
-affix/db.sqlite3
+templates/robots.txt
+details/migrations
+details/sitemaps.py
+affix/settings.py
+affix/urls.py
+affix/static
+db.sqlite3
 venv/
