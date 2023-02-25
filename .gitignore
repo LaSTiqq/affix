@@ -18,6 +18,7 @@
 templates/robots.txt
 details/migrations
 details/sitemaps.py
+details/forms.py
 affix/settings.py
 affix/urls.py
 affix/static
