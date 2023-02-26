@@ -9,32 +9,31 @@ from .forms import ContactForm
 def send(request):
     if request.method == 'POST':
         form = ContactForm(data=request.POST)
-        try:
-            form.is_valid()
-        except ValidationError:
-            messages.danger(request, 'Captcha ir kļūdaina, mēģiniet vēlreiz')
-            return redirect('/#contact_us')
-        body = {
-            'name': form.cleaned_data['name'],
-            'sender': form.cleaned_data['sender'],
-            'content': form.cleaned_data['content'],
-        }
-        html_content = render_to_string('email.html', {
-                                        'name': body['name'], 'sender': body['sender'], 'content': body['content']})
-        text_content = strip_tags(html_content)
-        email = EmailMultiAlternatives(
-            form.cleaned_data['subject'],
-            text_content,
-            'affixsia@gmail.com',
-            ['affixsia@inbox.lv']
-        )
-        email.attach_alternative(html_content, 'text/html')
-        email.send()
-        if email:
-            messages.success(request, 'Vēstule nosūtīta')
-            return redirect('/#contact_us')
+        if form.is_valid():
+            body = {
+                'name': form.cleaned_data['name'],
+                'sender': form.cleaned_data['sender'],
+                'content': form.cleaned_data['content'],
+            }
+            html_content = render_to_string('email.html', {
+                                            'name': body['name'], 'sender': body['sender'], 'content': body['content']})
+            text_content = strip_tags(html_content)
+            email = EmailMultiAlternatives(
+                form.cleaned_data['subject'],
+                text_content,
+                'affixsia@gmail.com',
+                ['affixsia@inbox.lv']
+            )
+            email.attach_alternative(html_content, 'text/html')
+            email.send()
+            if email:
+                messages.success(request, 'Vēstule nosūtīta')
+                return redirect('/#contact_us')
+            else:
+                messages.danger(request, 'Kaut kas nav izdevies, lūdzu, mēģiniet vēlreiz')
+                return redirect('/#contact_us')
         else:
-            messages.danger(request, 'Kaut kas nav izdevies, mēģiniet vēlreiz')
+            messages.warning(request, 'Captcha nav nospiesta, lūdzu, mēģiniet vēlreiz')
             return redirect('/#contact_us')
     else:
         form = ContactForm()
