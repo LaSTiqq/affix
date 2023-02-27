@@ -410,7 +410,7 @@
 			<div class="col-6">
 				<picture>
 					<source srcset="{% static 'img/jspa.webp' %}" type="image/webp">
-					<img src="{% static 'img/jspa.png' %}" alt="JSPA" class="img-fluid first">
+					<img src="{% static 'img/jspa.png' %}" alt="JSPA" class="img-fluid">
 				</picture>
 			</div>
 			<div class="col-6">
@@ -466,7 +466,7 @@
 	<div class="col-12">
 		{% for message in messages %}
 		<div class="container-fluid">
-			<div class="alert alert-{{ message.tags }} alert-dismissible rounded-pill" role="alert">
+			<div class="alert alert-{{ message.tags }} alert-dismissible rounded-pill fw-bold" role="alert">
 				{{ message }}
 				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Aizvērt"></button>
 			</div>

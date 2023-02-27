@@ -8,16 +8,16 @@ const scrollFunction = () => {
     arrow.style.display = "block";
     // End values
     if (logo_default) {
-      logo_default.style.width = "110px";
-      logo_default.style.height = "60px";
+      logo_default.style.width = "130px";
+      logo_default.style.height = "70px";
     }
     if (logo_newy) {
-      logo_newy.style.width = "115px";
-      logo_newy.style.height = "73px";
+      logo_newy.style.width = "140px";
+      logo_newy.style.height = "80px";
     }
     if (logo_lv) {
-      logo_lv.style.width = "110px";
-      logo_lv.style.height = "60px";
+      logo_lv.style.width = "130px";
+      logo_lv.style.height = "70px";
     }
   } else {
     arrow.style.display = "none";
@@ -27,8 +27,8 @@ const scrollFunction = () => {
       logo_default.style.height = "80px";
     }
     if (logo_newy) {
-      logo_newy.style.width = "165px";
-      logo_newy.style.height = "95px";
+      logo_newy.style.width = "170px";
+      logo_newy.style.height = "90px";
     }
     if (logo_lv) {
       logo_lv.style.width = "160px";
