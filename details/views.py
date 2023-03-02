@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import EmailMultiAlternatives
-from django.core.exceptions import ValidationError
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
+from django.conf import settings
 from smtplib import SMTPException
 from .forms import ContactForm
 
@@ -23,7 +23,7 @@ def send(request):
                 email = EmailMultiAlternatives(
                     form.cleaned_data['subject'],
                     text_content,
-                    'affixsia@gmail.com',
+                    settings.EMAIL_HOST_USER,
                     ['affixsia@inbox.lv']
                 )
                 email.attach_alternative(html_content, 'text/html')
@@ -32,12 +32,10 @@ def send(request):
                 return redirect('/#contact_us')
             except SMTPException:
                 messages.error(request, 'Kaut kas nav izdevies, lūdzu, mēģiniet vēlreiz')
-                return render(request, 'details/index.html', {"form": form})
-            return redirect('/#contact_us')
+                return redirect('/#contact_us')
         else:
             messages.warning(request, 'Captcha nebija nospiesta, lūdzu, mēģiniet vēlreiz')
-            return render(request, 'details/index.html', {"form": form})
-        return redirect('/#contact_us')
+            return redirect('/#contact_us')
     else:
         form = ContactForm()
     return render(request, 'details/index.html', {"form": form})
