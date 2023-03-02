@@ -33,7 +33,7 @@ def send(request):
                 messages.danger(request, 'Kaut kas nav izdevies, lūdzu, mēģiniet vēlreiz')
                 return redirect('/#contact_us')
         else:
-            messages.warning(request, 'Captcha nav nospiesta, lūdzu, mēģiniet vēlreiz')
+            messages.warning(request, 'Captcha nebija nospiesta, lūdzu, mēģiniet vēlreiz')
             return redirect('/#contact_us')
     else:
         form = ContactForm()
