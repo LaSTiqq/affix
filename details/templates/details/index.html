@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <!-- Services -->
-<a class="anchor" name="services"></a>
+<a class="anchor d-block" name="services"></a>
 <div data-aos="fade-up" data-aos-once="true">
 	<figure class="text-center">
 		<blockquote class="blockquote">
@@ -22,7 +22,7 @@
 					<span class="material-icons icons">design_services</span>
 				</button>
 			</div>
-			<h2 class="mt-3">Elektroietaišu projektēšana un autoruzraudzība</h2>
+			<h2 class="mt-3 text-center">Elektroietaišu projektēšana un autoruzraudzība</h2>
 		</div>
 	</div>
 	<!-- Modal button 2 -->
@@ -34,7 +34,7 @@
 					<span class="material-icons icons second">construction</span>
 				</button>
 			</div>
-			<h2 class="mt-3">Elektroietaišu izbūve</h2>
+			<h2 class="mt-3 text-center">Elektroietaišu izbūve</h2>
 		</div>
 	</div>
 	<!-- Modal button 3 -->
@@ -46,7 +46,7 @@
 					<span class="material-icons icons">engineering</span>
 				</button>
 			</div>
-			<h2 class="mt-3">Elektroietaišu izbūves darbu vadīšana un būvuzraudzība</h2>
+			<h2 class="mt-3 text-center">Elektroietaišu izbūves darbu vadīšana un būvuzraudzība</h2>
 		</div>
 	</div>
 	<!-- Modal button 4 -->
@@ -58,12 +58,12 @@
 					<span class="material-icons icons">troubleshoot</span>
 				</button>
 			</div>
-			<h2 class="mt-3">Elektroietaišu tehnisko parametru mērīšana un pārbaude</h2>
+			<h2 class="mt-3 text-center">Elektroietaišu tehnisko parametru mērīšana un pārbaude</h2>
 		</div>
 	</div>
 	<div class="col-12">
 		<div data-aos="zoom-in-up" data-aos-once="true">
-			<p class="mt-2"><strong>NACE2 4222</strong> Elektroapgādes un telekomunikāciju sistēmu
+			<p class="text-center mt-2"><strong>NACE2 4222</strong> Elektroapgādes un telekomunikāciju sistēmu
 				būvniecība</p>
 		</div>
 	</div>
@@ -76,18 +76,19 @@
 					<span class="material-icons icons">solar_power</span>
 				</button>
 			</div>
-			<h2 class="mt-3 mb-0">Saules enerģētika<br><span class="text-danger fw-bold new">Jaunums!</span></h2>
+			<h2 class="mt-3 mb-0 text-center">Saules enerģētika<br><span class="text-danger fw-bold new">Jaunums!</span>
+			</h2>
 			<!-- Modal button 6 -->
-			<a class="button" href="#" data-bs-toggle="modal" data-bs-target="#Modal6">
+			<a class="button d-block mx-auto" href="#" data-bs-toggle="modal" data-bs-target="#Modal6">
 				Uzzināt vairāk
 			</a>
 		</div>
 	</div>
 </div>
 <!-- Customers -->
-<a class="anchor" name="customers"></a>
+<a class="anchor d-block" name="customers"></a>
 <div data-aos="fade-up" data-aos-once="true">
-	<figure>
+	<figure class="text-center">
 		<blockquote class="blockquote">
 			<h1 class="mt-3">Mūsu partneri</h1>
 		</blockquote>
@@ -101,123 +102,120 @@
 					<div class="col-12">
 						<picture>
 							<source srcset="{% static 'img/logo_1.webp' %}" type="image/webp">
-							<img src="{% static 'img/logo_1.png' %}" class="img-fluid" alt="Latgales dārzeņu loģistika">
+							<img src="{% static 'img/logo_1.png' %}" class="img-fluid d-block mx-auto"
+								alt="Latgales dārzeņu loģistika">
 						</picture>
 					</div>
-					<div class="col-12">
-						<h2 class="fw-bold text-center">Latgales dārzeņu loģistika, SIA</h2>
-						<p><a target="_blank" rel="noreferrer" class="link-primary"
-								href="https://www.google.com/search?q=latgales+darzenu+logistika+latvija">Meklēt</a>
-						</p>
+					<div class="col-12 text-center">
+						<h2 class="fw-bold">Latgales dārzeņu loģistika, SIA</h2>
+						<a target="_blank" rel="noreferrer" class="mb-2"
+							href="https://www.google.com/search?q=latgales+darzenu+logistika+latvija">Meklēt</a>
 					</div>
 				</div>
 				<div class="carousel-item" data-bs-interval="2000">
 					<div class="col-12">
 						<picture>
 							<source srcset="{% static 'img/logo_2.webp' %}" type="image/webp">
-							<img src="{% static 'img/logo_2.png' %}" class="img-fluid"
+							<img src="{% static 'img/logo_2.png' %}" class="img-fluid d-block mx-auto"
 								alt="Mežvidu lauksaimniecības un tehnoloģiju parks">
 						</picture>
 					</div>
-					<div class="col-12">
-						<h2 class="fw-bold text-center">Mežvidu lauksaimniecības un tehnoloģiju parks, SIA
+					<div class="col-12 text-center">
+						<h2 class="fw-bold">Mežvidu lauksaimniecības un tehnoloģiju parks, SIA
 						</h2>
-						<p><a target="_blank" rel="noreferrer" class="link-primary"
-								href="https://mezvidi.lv/paruznemumulv">Mājaslapa</a></p>
+						<a target="_blank" rel="noreferrer" class="mb-2"
+							href="https://mezvidi.lv/paruznemumulv">Mājaslapa</a>
 					</div>
 				</div>
 				<div class="carousel-item" data-bs-interval="2000">
 					<div class="col-12">
 						<picture>
 							<source srcset="{% static 'img/logo_3.webp' %}" type="image/webp">
-							<img src="{% static 'img/logo_3.png' %}" class="img-fluid" alt="Aiva G">
+							<img src="{% static 'img/logo_3.png' %}" class="img-fluid d-block mx-auto" alt="Aiva G">
 						</picture>
 					</div>
-					<div class="col-12">
-						<h2 class="fw-bold text-center">Aiva G, SIA</h2>
-						<p><a target="_blank" rel="noreferrer" class="link-primary"
-								href="https://www.google.com/search?q=aiva+g+latvija">Meklēt</a></p>
+					<div class="col-12 text-center">
+						<h2 class="fw-bold">Aiva G, SIA</h2>
+						<a target="_blank" rel="noreferrer" class="mb-2"
+							href="https://www.google.com/search?q=aiva+g+latvija">Meklēt</a>
 					</div>
 				</div>
 				<div class="carousel-item active" data-bs-interval="2000">
 					<div class="col-12">
 						<picture>
 							<source srcset="{% static 'img/logo_4.webp' %}" type="image/webp">
-							<img src="{% static 'img/logo_4.png' %}" class="img-fluid" width="225" height="225"
-								alt="Helle Oy">
+							<img src="{% static 'img/logo_4.png' %}" class="img-fluid d-block mx-auto" width="225"
+								height="225" alt="Helle Oy">
 						</picture>
 					</div>
-					<div class="col-12">
-						<h2 class="fw-bold text-center">Helle Oy</h2>
-						<p><a target="_blank" rel="noreferrer" class="link-primary"
-								href="https://www.helle.fi">Mājaslapa</a></p>
+					<div class="col-12 text-center">
+						<h2 class="fw-bold">Helle Oy</h2>
+						<a target="_blank" rel="noreferrer" class="mb-2" href="https://www.helle.fi">Mājaslapa</a>
 					</div>
 				</div>
 				<div class="carousel-item" data-bs-interval="2000">
 					<div class="col-12">
 						<picture>
 							<source srcset="{% static 'img/logo_5.webp' %}" type="image/webp">
-							<img src="{% static 'img/logo_5.png' %}" class="img-fluid" alt="Signify">
+							<img src="{% static 'img/logo_5.png' %}" class="img-fluid d-block mx-auto" alt="Signify">
 						</picture>
 					</div>
-					<div class="col-12">
-						<h2 class="fw-bold text-center">Signify</h2>
-						<p><a target="_blank" rel="noreferrer" class="link-primary"
-								href="https://www.signify.com/global">Mājaslapa</a></p>
+					<div class="col-12 text-center">
+						<h2 class="fw-bold">Signify</h2>
+						<a target="_blank" rel="noreferrer" class="mb-2"
+							href="https://www.signify.com/global">Mājaslapa</a>
 					</div>
 				</div>
 				<div class="carousel-item" data-bs-interval="2000">
 					<div class="col-12">
 						<picture>
 							<source srcset="{% static 'img/logo_6.webp' %}" type="image/webp">
-							<img src="{% static 'img/logo_6.png' %}" class="img-fluid" alt="A.M.Ozoli">
+							<img src="{% static 'img/logo_6.png' %}" class="img-fluid d-block mx-auto" alt="A.M.Ozoli">
 						</picture>
 					</div>
-					<div class="col-12">
-						<h2 class="fw-bold text-center">A.M.Ozoli, SIA</h2>
-						<p><a target="_blank" rel="noreferrer" class="link-primary"
-								href="https://www.amozoli.lv">Mājaslapa</a></p>
+					<div class="col-12 text-center">
+						<h2 class="fw-bold">A.M.Ozoli, SIA</h2>
+						<a target="_blank" rel="noreferrer" class="mb-2" href="https://www.amozoli.lv">Mājaslapa</a>
 					</div>
 				</div>
 				<div class="carousel-item" data-bs-interval="2000">
 					<div class="col-12">
 						<picture>
 							<source srcset="{% static 'img/logo_7.webp' %}" type="image/webp">
-							<img src="{% static 'img/logo_7.png' %}" class="img-fluid"
+							<img src="{% static 'img/logo_7.png' %}" class="img-fluid d-block mx-auto"
 								alt="Baltijas Elektro Sabiedrība">
 						</picture>
 					</div>
-					<div class="col-12">
-						<h2 class="fw-bold text-center">Baltijas Elektro Sabiedrība, SIA</h2>
-						<p><a target="_blank" rel="noreferrer" class="link-primary" href="https://be.lv/">Mājaslapa</a>
-						</p>
+					<div class="col-12 text-center">
+						<h2 class="fw-bold">Baltijas Elektro Sabiedrība, SIA</h2>
+						<a target="_blank" rel="noreferrer" class="mb-2" href="https://be.lv/">Mājaslapa</a>
 					</div>
 				</div>
 				<div class="carousel-item" data-bs-interval="2000">
 					<div class="col-12">
 						<picture>
 							<source srcset="{% static 'img/logo_8.webp' %}" type="image/webp">
-							<img src="{% static 'img/logo_8.png' %}" class="img-fluid"
+							<img src="{% static 'img/logo_8.png' %}" class="img-fluid d-block mx-auto"
 								alt="Rēzeknes Tehnoloģiju akadēmija">
 						</picture>
 					</div>
-					<div class="col-12">
-						<h2 class="fw-bold text-center">Rēzeknes Tehnoloģiju akadēmija</h2>
-						<p><a target="_blank" rel="noreferrer" class="link-primary"
-								href="https://www.rta.lv/">Mājaslapa</a></p>
+					<div class="col-12 text-center">
+						<h2 class="fw-bold">Rēzeknes Tehnoloģiju akadēmija</h2>
+						<a target="_blank" rel="noreferrer" class="mb-2" href="https://www.rta.lv/">Mājaslapa</a>
 					</div>
 				</div>
 				<div class="carousel-item" data-bs-interval="2000">
 					<div class="col-12">
 						<picture>
 							<source srcset="{% static 'img/logo_9.webp' %}" type="image/webp">
-							<img src="{% static 'img/logo_9.png' %}" class="img-fluid" alt="Energo Dizains">
+							<img src="{% static 'img/logo_9.png' %}" class="img-fluid d-block mx-auto"
+								alt="Energo Dizains">
 						</picture>
 					</div>
-					<div class="col-12">
-						<h2 class="fw-bold text-center">Energo dizains, SIA</h2>
-						<p><a target="_blank" rel="noreferrer" class="link-primary"
-								href="https://www.energodizains.lv/">Mājaslapa</a></p>
+					<div class="col-12 text-center">
+						<h2 class="fw-bold">Energo dizains, SIA</h2>
+						<a target="_blank" rel="noreferrer" class="mb-2"
+							href="https://www.energodizains.lv/">Mājaslapa</a>
 					</div>
 				</div>
 				<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
@@ -233,7 +231,7 @@
 	</div>
 </div>
 <!-- Certificates -->
-<a class="anchor" name="certificates"></a>
+<a class="anchor d-block" name="certificates"></a>
 <div data-aos="fade-up" data-aos-once="true">
 	<figure class="text-center">
 		<blockquote class="blockquote">
@@ -248,7 +246,8 @@
 		<div data-aos="zoom-in" data-aos-once="true" data-aos-offset="200">
 			<picture>
 				<source srcset="{% static 'img/cert_1.webp' %}" type="image/webp">
-				<img src="{% static 'img/cert_1.jpg' %}" class="img-fluid my-2 my-lg-3" alt="Certificate 1">
+				<img src="{% static 'img/cert_1.jpg' %}" class="img-fluid d-block mx-auto my-2 my-lg-3"
+					alt="Certificate 1">
 			</picture>
 		</div>
 	</div>
@@ -256,7 +255,8 @@
 		<div data-aos="zoom-in" data-aos-once="true" data-aos-offset="200">
 			<picture>
 				<source srcset="{% static 'img/cert_2.webp' %}" type="image/webp">
-				<img src="{% static 'img/cert_2.jpg' %}" class="img-fluid my-2 my-lg-3" alt="Certificate 2">
+				<img src="{% static 'img/cert_2.jpg' %}" class="img-fluid d-block mx-auto my-2 my-lg-3"
+					alt="Certificate 2">
 			</picture>
 		</div>
 	</div>
@@ -264,7 +264,8 @@
 		<div data-aos="zoom-in" data-aos-once="true" data-aos-offset="200">
 			<picture>
 				<source srcset="{% static 'img/cert_3.webp' %}" type="image/webp">
-				<img src="{% static 'img/cert_3.jpg' %}" class="img-fluid my-2 my-lg-3" alt="Certificate 3">
+				<img src="{% static 'img/cert_3.jpg' %}" class="img-fluid d-block mx-auto my-2 my-lg-3"
+					alt="Certificate 3">
 			</picture>
 		</div>
 	</div>
@@ -273,7 +274,8 @@
 		<div data-aos="zoom-in" data-aos-once="true" data-aos-offset="100">
 			<picture>
 				<source srcset="{% static 'img/cert_4.webp' %}" type="image/webp">
-				<img src="{% static 'img/cert_4.jpg' %}" class="img-fluid my-2 my-lg-3" alt="Certificate 4">
+				<img src="{% static 'img/cert_4.jpg' %}" class="img-fluid d-block mx-auto my-2 my-lg-3"
+					alt="Certificate 4">
 			</picture>
 		</div>
 	</div>
@@ -282,7 +284,8 @@
 		<div data-aos="zoom-in" data-aos-once="true" data-aos-offset="100">
 			<picture>
 				<source srcset="{% static 'img/cert_5.webp' %}" type="image/webp">
-				<img src="{% static 'img/cert_5.jpg' %}" class="img-fluid my-2 my-lg-3" alt="Certificate 5">
+				<img src="{% static 'img/cert_5.jpg' %}" class="img-fluid d-block mx-auto my-2 my-lg-3"
+					alt="Certificate 5">
 			</picture>
 		</div>
 	</div>
@@ -290,9 +293,9 @@
 	<div class="col-md-2 support"></div>
 </div>
 <!-- Projects -->
-<a class="anchor" name="projects"></a>
+<a class="anchor d-block" name="projects"></a>
 <div data-aos="fade-up" data-aos-once="true">
-	<figure>
+	<figure class="text-center">
 		<blockquote class="blockquote">
 			<h1 class="mt-4 mt-lg-5">Projekti</h1>
 		</blockquote>
@@ -314,7 +317,7 @@
 							Ieraudzīju akadēmijā sludinājumu par darba iespējām uzņēmumā Eiropas Komisijas programmas
 							"<a target="_blank" href="https://europa.eu/youth/solidarity_lv" rel="noreferrer"
 								class="link-primary">Eiropas Solidaritātes korpusa</a>" darba projekta ietvaros.
-							Sazinājos, un ātri nonācām pie kopsaucēja: uzņēmumam vajadzēja mājaslapu – man vajadzēja
+							Sazinājos, un ātri nonācām pie kopsaucēja: uzņēmumam vajadzēja mājaslapu, man vajadzēja
 							pieredzi. Ieguvu vērtīgu ierakstu savā CV, kā arī iepazinos no iekšienes ar visām izstrādes
 							niansēm.
 						</p>
@@ -393,39 +396,38 @@
 				<span class="visually-hidden">Nākamais</span>
 			</button>
 		</div>
-		<div class="row text-plus-logo">
+		<div class="row">
 			<div class="col-12">
-				<p>
+				<p class="text-center">
 					Projekti "<strong><i>Atbalsts jaunietim pirmajā darba vietā</i></strong>" (1) un
-					"<strong><i>Patstāvīgs
-							jaunietis darba tirgū iespēja patstāvībai darba tirgus jaunpienācējiem</i></strong>" (2)
-					tika
-					finansēti ar Eiropas Komisijas programmas "Eiropas Solidaritātes korpusa" atbalstu.
+					"<strong><i>Patstāvīgs jaunietis darba tirgū iespēja patstāvībai darba tirgus
+							jaunpienācējiem</i></strong>" (2) tika finansēti ar Eiropas Komisijas
+					programmas "Eiropas Solidaritātes korpusa" atbalstu.
 					Šī publikācija atspoguļo vienīgi autoru uzskatus, un Komisijai nevar uzlikt atbildību par tajā
-					ietvertās informācijas jebkādu iespējamo izlietojumu.<br><br>(1) Līguma numurs:<strong>
-						2020-3-LV02-ESC21-003633</strong><br>(2) Līguma numurs:
-					<strong>2020-2-LV02-ESC21-003336</strong>
+					ietvertās informācijas jebkādu iespējamo izlietojumu.<br><br>
+					(1) Līguma numurs: <strong>2020-3-LV02-ESC21-003633</strong><br>
+					(2) Līguma numurs: <strong>2020-2-LV02-ESC21-003336</strong>
 				</p>
 			</div>
 			<div class="col-6">
 				<picture>
 					<source srcset="{% static 'img/jspa.webp' %}" type="image/webp">
-					<img src="{% static 'img/jspa.png' %}" alt="JSPA" class="img-fluid">
+					<img src="{% static 'img/jspa.png' %}" alt="JSPA" class="img-fluid d-block mx-auto partners">
 				</picture>
 			</div>
 			<div class="col-6">
 				<picture>
 					<source srcset="{% static 'img/esk.webp' %}" type="image/webp">
-					<img src="{% static 'img/esk.png' %}" alt="ESK" class="img-fluid">
+					<img src="{% static 'img/esk.png' %}" alt="ESK" class="img-fluid d-block mx-auto partners">
 				</picture>
 			</div>
 		</div>
 	</div>
 </div>
 <!-- Useful links -->
-<a class="anchor" name="useful"></a>
+<a class="anchor d-block" name="useful"></a>
 <div data-aos="fade-up" data-aos-once="true">
-	<figure>
+	<figure class="text-center">
 		<blockquote class="blockquote">
 			<h1 class="mt-3">Noderīgas saites</h1>
 		</blockquote>
@@ -438,24 +440,24 @@
 				<li>
 					<p class="mb-1">Mikroģeneratora pieslēgšanas pieteikums klientu portālā <a target="_blank"
 							href="https://www.e-st.lv/lv/private/pieteikt-pakalpojumu/st-pieslegumi/mikrogeneratora-pieslegsana-1/jauna-mikrogeneratora-pieslegsana/step/1"
-							rel="noreferrer" class="link-primary fw-bold">e-st.lv</a></p>
+							rel="noreferrer" class="fw-bold">e-st.lv</a></p>
 				</li>
 				<li>
 					<p class="mb-1">Mikroģeneratora pieslēgšana <a target="_blank"
 							href="https://sadalestikls.lv/lv/mikrogeneratora-pieslegsana" rel="noreferrer"
-							class="link-primary fw-bold">sadalestikls.lv</a></p>
+							class="fw-bold">sadalestikls.lv</a></p>
 				</li>
 				<li>
 					<p class="mb-1">SIA Energo dizains mājaslapa <a target="_blank" href="https://www.energodizains.lv/"
-							rel="noreferrer" class="link-primary fw-bold">energodizains.lv</a></p>
+							rel="noreferrer" class="fw-bold">energodizains.lv</a></p>
 				</li>
 			</ul>
 		</div>
 	</div>
 </div>
 <!-- Contact us -->
-<a class="anchor" name="contact_us"></a>
-<figure>
+<a class="anchor d-block" name="contact_us"></a>
+<figure class="text-center">
 	<blockquote class="blockquote">
 		<h1 class="mt-3">Sazināties ar mums</h1>
 	</blockquote>
@@ -531,14 +533,14 @@
 					<div class="col-6">
 						<picture>
 							<source srcset="{% static 'img/illu_1.webp' %}" type="image/webp">
-							<img src="{% static 'img/illu_1.jpg' %}" class="mb-2 border border-dark"
+							<img src="{% static 'img/illu_1.jpg' %}" class="mb-2 d-block mx-auto border border-dark"
 								alt="Illustration 1">
 						</picture>
 					</div>
 					<div class="col-6">
 						<picture>
 							<source srcset="{% static 'img/illu_2.webp' %}" type="image/webp">
-							<img src="{% static 'img/illu_2.jpg' %}" class="mb-2 border border-dark"
+							<img src="{% static 'img/illu_2.jpg' %}" class="mb-2 d-block mx-auto border border-dark"
 								alt="Illustration 2">
 						</picture>
 					</div>
@@ -574,14 +576,14 @@
 					<div class="col-6">
 						<picture>
 							<source srcset="{% static 'img/illu_3.webp' %}" type="image/webp">
-							<img src="{% static 'img/illu_3.jpg' %}" class="mb-2" style="object-fit: cover"
-								alt="Illustration 3">
+							<img src="{% static 'img/illu_3.jpg' %}" class="mb-2 d-block mx-auto"
+								style="object-fit: cover" alt="Illustration 3">
 						</picture>
 					</div>
 					<div class="col-6">
 						<picture>
 							<source srcset="{% static 'img/illu_4.webp' %}" type="image/webp">
-							<img src="{% static 'img/illu_4.jpeg' %}" class="mb-2" alt="Illustration 4">
+							<img src="{% static 'img/illu_4.jpeg' %}" class="mb-2 d-block mx-auto" alt="Illustration 4">
 						</picture>
 					</div>
 					<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Aizvērt</button>
@@ -614,13 +616,13 @@
 					<div class="col-6">
 						<picture>
 							<source srcset="{% static 'img/illu_5.webp' %}" type="image/webp">
-							<img src="{% static 'img/illu_5.jpg' %}" class="mb-2" alt="Illustration 5">
+							<img src="{% static 'img/illu_5.jpg' %}" class="mb-2 d-block mx-auto" alt="Illustration 5">
 						</picture>
 					</div>
 					<div class="col-6">
 						<picture>
 							<source srcset="{% static 'img/illu_6.webp' %}" type="image/webp">
-							<img src="{% static 'img/illu_6.jpg' %}" class="mb-2" alt="Illustration 6">
+							<img src="{% static 'img/illu_6.jpg' %}" class="mb-2 d-block mx-auto" alt="Illustration 6">
 						</picture>
 					</div>
 					<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Aizvērt</button>
@@ -652,14 +654,14 @@
 					<div class="col-6">
 						<picture>
 							<source srcset="{% static 'img/illu_7.webp' %}" type="image/webp">
-							<img src="{% static 'img/illu_7.jpg' %}" class="mb-2 border border-dark"
+							<img src="{% static 'img/illu_7.jpg' %}" class="mb-2 d-block mx-auto border border-dark"
 								alt="Illustration 7">
 						</picture>
 					</div>
 					<div class="col-6">
 						<picture>
 							<source srcset="{% static 'img/illu_8.webp' %}" type="image/webp">
-							<img src="{% static 'img/illu_8.jpeg' %}" class="mb-2 border border-dark"
+							<img src="{% static 'img/illu_8.jpeg' %}" class="mb-2 d-block mx-auto border border-dark"
 								alt="Illustration 8">
 						</picture>
 					</div>
@@ -690,14 +692,15 @@
 					<div class="col-6">
 						<picture>
 							<source srcset="{% static 'img/illu_9.webp' %}" type="image/webp">
-							<img src="{% static 'img/illu_9.jpeg' %}" class="mb-2" style="object-fit: cover"
-								alt="Illustration 9">
+							<img src="{% static 'img/illu_9.jpeg' %}" class="mb-2 d-block mx-auto"
+								style="object-fit: cover" alt="Illustration 9">
 						</picture>
 					</div>
 					<div class="col-6">
 						<picture>
 							<source srcset="{% static 'img/illu_10.webp' %}" type="image/webp">
-							<img src="{% static 'img/illu_10.jpg' %}" class="mb-2" alt="Illustration 10">
+							<img src="{% static 'img/illu_10.jpg' %}" class="mb-2 d-block mx-auto"
+								alt="Illustration 10">
 						</picture>
 					</div>
 					<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Aizvērt</button>
