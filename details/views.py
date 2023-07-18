@@ -7,6 +7,7 @@ from django.conf import settings
 from smtplib import SMTPException
 from .forms import ContactForm
 
+
 def send(request):
     if request.method == 'POST':
         form = ContactForm(data=request.POST)
@@ -31,10 +32,12 @@ def send(request):
                 messages.success(request, 'Vēstule nosūtīta')
                 return redirect('/#contact_us')
             except SMTPException:
-                messages.error(request, 'Kaut kas nav izdevies, lūdzu, mēģiniet vēlreiz')
+                messages.error(
+                    request, 'Kaut kas nav izdevies, lūdzu, mēģiniet vēlreiz')
                 return redirect('/#contact_us')
         else:
-            messages.warning(request, 'Captcha nebija nospiesta, lūdzu, mēģiniet vēlreiz')
+            messages.warning(
+                request, 'Captcha nebija nospiesta, lūdzu, mēģiniet vēlreiz')
             return redirect('/#contact_us')
     else:
         form = ContactForm()
