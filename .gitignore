@@ -18,7 +18,6 @@
 templates/robots.txt
 details/forms.py
 affix/settings.py
-affix/urls.py
 affix/static
 sitemap.xml
 .vscode
