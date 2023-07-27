@@ -16,7 +16,6 @@
 
 # Self
 templates/robots.txt
-details/forms.py
 affix/settings.py
 affix/static
 sitemap.xml

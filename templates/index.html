@@ -474,18 +474,12 @@
 	</figure>
 	<hr class="mt-lg-3 mt-xl-5">
 </div>
-<div class="row">
-	<div class="col-12">
-		{% for message in messages %}
-		<div class="container-fluid">
-			<div class="alert alert-{{ message.tags }} alert-dismissible rounded-pill fw-bold" role="alert">
-				{{ message }}
-				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Aizvērt"></button>
-			</div>
-		</div>
-		{% endfor %}
-	</div>
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible rounded-pill fw-bold" role="alert">
+	{{ message }}
+	<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Aizvērt"></button>
 </div>
+{% endfor %}
 <form method="post" class="d-flex justify-content-center">
 	{% csrf_token %}
 	<div class="row gx-0">
