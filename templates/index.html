@@ -483,7 +483,7 @@
 <form method="post" class="d-flex justify-content-center">
 	{% csrf_token %}
 	<div class="row gx-0">
-		<div class="col-md-6">
+		<div class="col-12 col-md-6">
 			<div data-aos="fade-right" data-aos-once="true" data-aos-offset="200" data-aos-duration="500">
 				{{ form.name }}
 			</div>
@@ -494,15 +494,15 @@
 				{{ form.subject }}
 			</div>
 		</div>
-		<div class="col-md-6">
+		<div class="col-12 col-md-6">
 			<div data-aos="fade-left" data-aos-once="true" data-aos-offset="200" data-aos-duration="500">
 				{{ form.content }}
 			</div>
 		</div>
-		<div class="col-md-12">
+		<div class="col-12">
 			<div data-aos="fade-up" data-aos-once="true" data-aos-offset="200" data-aos-duration="500">
 				{{ form.captcha }}
-				<button type="submit" class="btn btn-dark d-block mx-auto my-3">Nosūtīt</button>
+				<button type="submit" class="btn btn-dark d-block mx-auto my-2">Nosūtīt</button>
 			</div>
 		</div>
 	</div>
