@@ -9,9 +9,22 @@ from .forms import ContactForm
 import re
 
 
-def contains_link(text):
-    url_pattern = r"http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
-    return bool(re.search(url_pattern, text))
+def restricted_found(text):
+    url_pattern = r"(?:http[s]?://|www\.)[^\s/$.?#].[^\s]*"
+    russian_pattern = r"[а-яА-ЯёЁ]"
+    restricted_keywords = ["WhatsApp", "whatsapp", "Telegram", "telegram", "tg",
+                           "Discord", "discord", "Viber", "viber", "icq", "ICQ",
+                           "Skype", "skype", "+7(977)", "+7 (977)", "+7977", "+7 977",
+                           "rub", "RUB", "Bonus", "bonus", "Free", "free", "Gift", "gift",
+                           "Order now", "order now", "Spam", "spam", "Website", "website",
+                           "Visit our", "visit our", "Earn", "earn"]
+
+    has_link = bool(re.search(url_pattern, text))
+    has_russian = bool(re.search(russian_pattern, text))
+    has_restricted_keyword = any(
+        keyword in text for keyword in restricted_keywords)
+
+    return has_link or has_russian or has_restricted_keyword
 
 
 def send(request):
@@ -23,9 +36,9 @@ def send(request):
                 'sender': form.cleaned_data['sender'],
                 'content': form.cleaned_data['content'],
             }
-            if contains_link(body['content']):
+            if restricted_found(body['content']):
                 messages.warning(
-                    request, "Saites nav atļautas ziņojuma tekstā!")
+                    request, "Jūs ievadījāt kaut ko aizliegtu! Ziņa netika nosūtīta")
                 return redirect('/#contact_us')
             html_content = render_to_string('email.html', {
                                             'name': body['name'], 'sender': body['sender'], 'content': body['content']})
