@@ -68,3 +68,12 @@ navbarLinks.forEach((link) => {
     }
   });
 });
+
+// Disable/enable submit form button if captcha is/not verified
+function enable() {
+  document.getElementById("submitButton").disabled = false;
+}
+
+function disable() {
+  document.getElementById("submitButton").disabled = true;
+}

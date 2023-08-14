@@ -10,19 +10,21 @@ import re
 
 
 def restricted_found(text):
-    url_pattern = r"(?:http[s]?://|www\.)[^\s/$.?#].[^\s]*"
+    url_pattern = re.compile(
+        r'https?://(?:[a-zA-Z0-9]|[.!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+')
     russian_pattern = r"[а-яА-ЯёЁ]"
-    restricted_keywords = ["WhatsApp", "whatsapp", "Telegram", "telegram", "tg",
-                           "Discord", "discord", "Viber", "viber", "icq", "ICQ",
-                           "Skype", "skype", "+7(977)", "+7 (977)", "+7977", "+7 977",
-                           "rub", "RUB", "Bonus", "bonus", "Free", "free", "Gift", "gift",
-                           "Order now", "order now", "Spam", "spam", "Website", "website",
-                           "Visit our", "visit our", "Earn", "earn"]
+    restricted_keywords = ["whatsapp", "telegram", "tg", "discord", "viber", "icq", "skype",
+                           "+7(977)", "+7 (977)", "+7977", "+7 977", "rub",
+                           "bonus", "free", "gift", "order now", "spam", "website", "visit our", "earn",
+                           "congratulations", "don't miss", "buy now", "limited time", "exclusive offer",
+                           "act fast", "special deal", "discount", "sale"]
+
+    text_lower = text.lower()
 
     has_link = bool(re.search(url_pattern, text))
     has_russian = bool(re.search(russian_pattern, text))
-    has_restricted_keyword = any(
-        keyword in text for keyword in restricted_keywords)
+    has_restricted_keyword = any(re.search(
+        r'\b' + re.escape(keyword) + r'\b', text_lower) for keyword in restricted_keywords)
 
     return has_link or has_russian or has_restricted_keyword
 
@@ -38,7 +40,7 @@ def send(request):
             }
             if restricted_found(body['content']):
                 messages.warning(
-                    request, "Jūs ievadījāt kaut ko aizliegtu! Ziņa netika nosūtīta")
+                    request, "Jūs ievadījāt kaut ko neatļautu vai ielīmējāt saiti un ziņa netika nosūtīta. Mēginiet vēlreiz.")
                 return redirect('/#contact_us')
             html_content = render_to_string('email.html', {
                                             'name': body['name'], 'sender': body['sender'], 'content': body['content']})
@@ -56,11 +58,11 @@ def send(request):
                 return redirect('/#contact_us')
             except SMTPException:
                 messages.error(
-                    request, 'Kaut kas nav izdevies, lūdzu, mēģiniet vēlreiz')
+                    request, 'Radās kļūda un ziņa netika nosūtīta. Mēginiet vēlreiz.')
                 return redirect('/#contact_us')
         else:
-            messages.warning(
-                request, 'Captcha nebija izieta, lūdzu, mēģiniet vēlreiz')
+            messages.danger(
+                request, 'Captcha nebija izieta. Mēģiniet vēlreiz')
             return redirect('/#contact_us')
     else:
         form = ContactForm()
