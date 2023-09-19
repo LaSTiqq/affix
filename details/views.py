@@ -40,7 +40,7 @@ def send(request):
             }
             if restricted_found(body['content']):
                 messages.warning(
-                    request, "Jūs ievadījāt kaut ko neatļautu vai ielīmējāt saiti un ziņa netika nosūtīta. Mēginiet vēlreiz.")
+                    request, "Jūs ievadījāt kaut ko neatļautu vai ielīmējāt saiti un ziņa netika nosūtīta. Mēģiniet vēlreiz.")
                 return redirect('/#contact_us')
             html_content = render_to_string('email.html', {
                                             'name': body['name'], 'sender': body['sender'], 'content': body['content']})
@@ -58,7 +58,7 @@ def send(request):
                 return redirect('/#contact_us')
             except SMTPException:
                 messages.error(
-                    request, 'Radās kļūda un ziņa netika nosūtīta. Mēginiet vēlreiz.')
+                    request, 'Radās kļūda un ziņa netika nosūtīta. Mēģiniet vēlreiz.')
                 return redirect('/#contact_us')
         else:
             messages.danger(
