@@ -14,17 +14,15 @@ def restricted_found(text):
         r'https?://(?:[a-zA-Z0-9]|[.!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+')
     russian_pattern = r"[а-яА-ЯёЁ]"
     restricted_keywords = ["whatsapp", "telegram", "tg", "discord", "viber", "icq", "skype",
-                           "+7(977)", "+7 (977)", "+7977", "+7 977", "rub",
+                           "+7(977)", "+7 (977)", "+7977", "+7 977", "rub", "dollars", "eur",
                            "bonus", "free", "gift", "order now", "spam", "website", "visit our", "earn",
                            "congratulations", "don't miss", "buy now", "limited time", "exclusive offer",
                            "act fast", "special deal", "discount", "sale"]
 
-    text_lower = text.lower()
-
     has_link = bool(re.search(url_pattern, text))
     has_russian = bool(re.search(russian_pattern, text))
     has_restricted_keyword = any(re.search(
-        r'\b' + re.escape(keyword) + r'\b', text_lower) for keyword in restricted_keywords)
+        r'\b' + re.escape(keyword) + r'\b', text, flags=re.IGNORECASE) for keyword in restricted_keywords)
 
     return has_link or has_russian or has_restricted_keyword
 
@@ -38,9 +36,13 @@ def send(request):
                 'sender': form.cleaned_data['sender'],
                 'content': form.cleaned_data['content'],
             }
-            if restricted_found(body['content']):
+            if restricted_found(form.cleaned_data['subject']):
                 messages.warning(
-                    request, "Jūs ievadījāt kaut ko neatļautu vai ielīmējāt saiti un ziņa netika nosūtīta. Mēģiniet vēlreiz.")
+                    request, "Jūs ievadījāt kaut ko neatļautu un ziņa netika nosūtīta. Mēģiniet vēlreiz.")
+                return redirect('/#contact_us')
+            elif restricted_found(body['content']):
+                messages.warning(
+                    request, "Jūs ievadījāt kaut ko neatļautu un ziņa netika nosūtīta. Mēģiniet vēlreiz.")
                 return redirect('/#contact_us')
             html_content = render_to_string('email.html', {
                                             'name': body['name'], 'sender': body['sender'], 'content': body['content']})
