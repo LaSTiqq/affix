@@ -18,6 +18,5 @@
 templates/robots.txt
 affix/settings.py
 affix/static
-sitemap.xml
 .vscode
 venv
