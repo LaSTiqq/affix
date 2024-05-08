@@ -1,12 +1,10 @@
 const logoDefault = document.getElementById("logo_default");
 const logoNovember = document.getElementById("logo_november");
 const logoJanuary = document.getElementById("logo_january");
-const arrow = document.getElementById("arrow");
 
 const scrollFunction = () => {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     // End values
-    arrow.style.display = "block";
     if (logoDefault) {
       logoDefault.style.width = "130px";
       logoDefault.style.height = "70px";
@@ -21,7 +19,6 @@ const scrollFunction = () => {
     }
   } else {
     // Start values
-    arrow.style.display = "none";
     if (logoDefault) {
       logoDefault.style.width = "160px";
       logoDefault.style.height = "80px";
