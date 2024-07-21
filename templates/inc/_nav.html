@@ -1,26 +1,26 @@
 {% load static %}
 <nav class="navbar navbar-dark fixed-top navbar-expand-lg">
-	<div class="container-fluid">
+	<div class="container">
 		{% now "F" as current_month %}
 		{% if current_month == 'December' %}
 		<a class="navbar-brand p-0" href="/">
 			<picture>
-				<source srcset="{% static 'img/logo_january.webp' %}" type="image/webp">
-				<img src="{% static 'img/logo_january.png' %}" alt="Affix logo January" id="logo_january">
+				<source srcset="{% static 'img/logos/logo_december.webp' %}" type="image/webp">
+				<img src="{% static 'img/logos/logo_december.png' %}" alt="Affix logo December" id="logo_december">
 			</picture>
 		</a>
 		{% elif current_month == 'November' %}
 		<a class="navbar-brand p-0" href="/">
 			<picture>
-				<source srcset="{% static 'img/logo_november.webp' %}" type="image/webp">
-				<img src="{% static 'img/logo_november.png' %}" alt="Affix logo November" id="logo_november">
+				<source srcset="{% static 'img/logos/logo_november.webp' %}" type="image/webp">
+				<img src="{% static 'img/logos/logo_november.png' %}" alt="Affix logo November" id="logo_november">
 			</picture>
 		</a>
 		{% else %}
 		<a class="navbar-brand p-0" href="/">
 			<picture>
-				<source srcset="{% static 'img/logo_default.webp' %}" type="image/webp">
-				<img src="{% static 'img/logo_default.png' %}" alt="Affix logo default" id="logo_default">
+				<source srcset="{% static 'img/logos/logo_default.webp' %}" type="image/webp">
+				<img src="{% static 'img/logos/logo_default.png' %}" alt="Affix logo default" id="logo_default">
 			</picture>
 		</a>
 		{% endif %}
@@ -29,26 +29,14 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="nav">
-			<ul class="navbar-nav ms-lg-auto me-lg-5 fw-bold">
-				<li class="nav-item"><a class="nav-link me-2 me-xl-3" href="#partners">Partneri</a></li>
-				<li class="nav-item"><a class="nav-link me-2 me-xl-3" href="#certificates">Sertifikāti</a></li>
-				<li class="nav-item"><a class="nav-link me-2 me-xl-3" href="#projects">Projekti</a></li>
-				<li class="nav-item"><a class="nav-link me-2 me-xl-3" href="#useful">Noderīgi</a></li>
-				<li class="nav-item"><a class="nav-link me-2 me-xl-3" href="#contact_us">Saziņa</a></li>
-				<li class="nav-item"><a class="nav-link me-2 me-xl-3" href="#contacts">Kontakti</a></li>
+			<ul class="navbar-nav ms-lg-auto fw-bold">
+				<li class="ms-3 ms-lg-0 me-lg-3 mt-2 mt-lg-0"><a href="#partners">Partneri</a></li>
+				<li class="ms-3 ms-lg-0 me-lg-3 mt-2 mt-lg-0"><a href="#certificates">Sertifikāti</a></li>
+				<li class="ms-3 ms-lg-0 me-lg-3 mt-2 mt-lg-0"><a href="#projects">Projekti</a></li>
+				<li class="ms-3 ms-lg-0 me-lg-3 mt-2 mt-lg-0"><a href="#useful">Noderīgi</a></li>
+				<li class="ms-3 ms-lg-0 me-lg-3 mt-2 mt-lg-0"><a href="#contact_us">Saziņa</a></li>
+				<li class="ms-3 ms-lg-0 me-lg-3 mt-2 mt-lg-0"><a href="#contacts">Kontakti</a></li>
 			</ul>
 		</div>
 	</div>
 </nav>
-<div class="container-fluid">
-	<div class="row description">
-		<div class="col-12">
-			<div data-aos="fade-up" data-aos-duration="850">
-				<h1 class="text-center"><span class="fw-bold">SIA AFFIX</span> ir uzņēmums,<br>kura pamatdarbība ir
-					saistīta ar
-					elektroietaisēm</h1>
-				<a class="button d-block mx-auto fw-bold mt-4" href="#services">Uzzināt vairāk</a>
-			</div>
-		</div>
-	</div>
-</div>
