@@ -9,12 +9,14 @@
 				<div class="height"></div>
 				<div class="col-12 col-md-10">
 					<div class="overlay-header">
-						<div data-aos="fade-up" data-aos-duration="850">
+						<div data-aos="fade-up">
 							<h1 class="text-center"><span class="fw-bold">AFFIX</span> ir uzņēmums, kura
 								pamatdarbība ir saistīta ar elektroietaisēm un saules paneļiem</h1>
 						</div>
 					</div>
-					<a class="button text-center fw-bold d-block mx-auto mt-4" href="#services">Uzzināt vairāk</a>
+					<div data-aos="fade-down">
+						<a class="button text-center fw-bold d-block mx-auto mt-4" href="#services">Uzzināt vairāk</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -44,7 +46,7 @@
 								<span class="material-icons">design_services</span>
 							</button>
 						</div>
-						<h3 class="mt-3 text-center">Elektroietaišu projektēšana un autoruzraudzība</h3>
+						<h3 class="text-center mt-3">Elektroietaišu projektēšana un autoruzraudzība</h3>
 					</div>
 				</div>
 				<!-- Modal button 2 -->
@@ -56,7 +58,7 @@
 								<span class="material-icons second">construction</span>
 							</button>
 						</div>
-						<h3 class="mt-3 text-center">Elektroietaišu izbūve</h3>
+						<h3 class="text-center mt-3">Elektroietaišu izbūve</h3>
 					</div>
 				</div>
 				<!-- Modal button 3 -->
@@ -68,7 +70,7 @@
 								<span class="material-icons">engineering</span>
 							</button>
 						</div>
-						<h3 class="mt-3 text-center">Elektroietaišu izbūves darbu vadīšana un būvuzraudzība</h3>
+						<h3 class="text-center mt-3">Elektroietaišu izbūves darbu vadīšana un būvuzraudzība</h3>
 					</div>
 				</div>
 				<!-- Modal button 4 -->
@@ -80,7 +82,7 @@
 								<span class="material-icons">troubleshoot</span>
 							</button>
 						</div>
-						<h3 class="mt-3 text-center">Elektroietaišu tehnisko parametru mērīšana un pārbaude</h3>
+						<h3 class="text-center mt-3">Elektroietaišu tehnisko parametru mērīšana un pārbaude</h3>
 					</div>
 				</div>
 				<div class="col-12">
@@ -91,20 +93,20 @@
 				</div>
 				<!-- Modal button 5 -->
 				<div class="col-12">
-					<div data-aos="zoom-in-up" data-aos-offset="200" data-aos-duration="500">
+					<div data-aos="zoom-in-up" data-aos-offset="200">
 						<div class="overlay" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover"
 							title="Spied mani">
 							<button type="button" data-bs-toggle="modal" data-bs-target="#Modal5" class="btn">
 								<span class="material-icons">solar_power</span>
 							</button>
 						</div>
-						<h3 class="mt-3 text-center">Saules enerģētika<br>
+						<h3 class="text-center mt-3">Saules enerģētika<br>
 							<span class="text-danger fw-bold position-relative new">Jaunums!</span>
 						</h3>
 						<!-- Modal button 6 -->
-						<a class="button text-center fw-bold d-block mx-auto" href="#" data-bs-toggle="modal"
+						<button class="button text-center fw-bold d-block mx-auto" data-bs-toggle="modal"
 							data-bs-target="#Modal6">Uzzināt vairāk
-						</a>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -132,20 +134,18 @@
 						<div class="text-center">
 							<h3 class="fw-bold">Latgales dārzeņu loģistika, SIA</h3>
 							<a target="_blank" rel="noreferrer" class="mb-2"
-								href="https://www.latgalesdarzeni.lv/">Mājaslapa</a>
+								href="https://www.google.com/search?q=latgales+darzenu+logistika">Meklēt</a>
 						</div>
 					</div>
 					<div class="carousel-item" data-bs-interval="2000">
 						<picture>
 							<source srcset="{% static 'img/customers/logo_2.webp' %}" type="image/webp">
 							<img src="{% static 'img/customers/logo_2.png' %}" class="d-block mx-auto"
-								alt="Uzņēmuma Mežvidu lauksaimniecības un tehnoloģiju parks logotips">
+								alt="Uzņēmuma Mežvidu lauksaimniecības tehnoloģiju parks logotips">
 						</picture>
 						<div class="text-center">
-							<h3 class="fw-bold">Mežvidu lauksaimniecības un tehnoloģiju parks, SIA
-							</h3>
-							<a target="_blank" rel="noreferrer" class="mb-2"
-								href="https://mezvidi.lv/paruznemumulv">Mājaslapa</a>
+							<h3 class="fw-bold">Mežvidu lauksaimniecības tehnoloģiju parks, SIA</h3>
+							<a target="_blank" rel="noreferrer" class="mb-2" href="https://mezvidi.lv/">Mājaslapa</a>
 						</div>
 					</div>
 					<div class="carousel-item" data-bs-interval="2000">
@@ -440,31 +440,37 @@
 			</div>
 			<div class="row justify-content-center collaborators">
 				<div class="col-10">
-					<p class="text-center">
-						Projekti "<span class="fst-italic fw-bold">Atbalsts jaunietim pirmajā darba vietā</span>"
-						(1) un
-						"<span class="fst-italic fw-bold">Patstāvīgs jaunietis darba tirgū iespēja patstāvībai darba
-							tirgus
-							jaunpienācējiem</span>" (2) tika finansēti ar Eiropas Komisijas
-						programmas "Eiropas Solidaritātes korpusa" atbalstu.
-						Šī publikācija atspoguļo vienīgi autoru uzskatus, un Komisijai nevar uzlikt atbildību par
-						tajā ietvertās informācijas jebkādu iespējamo izlietojumu.<br><br>
-						(1) Līguma numurs: <span class="fw-bold">2020-3-LV02-ESC21-003633</span><br>
-						(2) Līguma numurs: <span class="fw-bold">2020-2-LV02-ESC21-003336</span>
-					</p>
+					<div data-aos="fade-up">
+						<p class="text-center">
+							Projekti "<span class="fst-italic fw-bold">Atbalsts jaunietim pirmajā darba vietā</span>"
+							(1) un
+							"<span class="fst-italic fw-bold">Patstāvīgs jaunietis darba tirgū iespēja patstāvībai darba
+								tirgus
+								jaunpienācējiem</span>" (2) tika finansēti ar Eiropas Komisijas
+							programmas "Eiropas Solidaritātes korpusa" atbalstu.
+							Šī publikācija atspoguļo vienīgi autoru uzskatus, un Komisijai nevar uzlikt atbildību par
+							tajā ietvertās informācijas jebkādu iespējamo izlietojumu.<br><br>
+							(1) Līguma numurs: <span class="fw-bold">2020-3-LV02-ESC21-003633</span><br>
+							(2) Līguma numurs: <span class="fw-bold">2020-2-LV02-ESC21-003336</span>
+						</p>
+					</div>
 				</div>
 				<div class="col-12 col-md-6">
-					<picture>
-						<source srcset="{% static 'img/esk/jspa.webp' %}" type="image/webp">
-						<img src="{% static 'img/esk/jspa.png' %}" alt="Jaunatnes Starptautisko Programmu Aģentūra"
-							class="d-block mx-auto">
-					</picture>
+					<div data-aos="fade-right">
+						<picture>
+							<source srcset="{% static 'img/esk/jspa.webp' %}" type="image/webp">
+							<img src="{% static 'img/esk/jspa.png' %}" alt="Jaunatnes Starptautisko Programmu Aģentūra"
+								class="d-block mx-auto">
+						</picture>
+					</div>
 				</div>
 				<div class="col-12 col-md-6">
-					<picture>
-						<source srcset="{% static 'img/esk/eu.webp' %}" type="image/webp">
-						<img src="{% static 'img/esk/eu.png' %}" alt="Eiropas Savienība" class="d-block mx-auto">
-					</picture>
+					<div data-aos="fade-left">
+						<picture>
+							<source srcset="{% static 'img/esk/eu.webp' %}" type="image/webp">
+							<img src="{% static 'img/esk/eu.png' %}" alt="Eiropas Savienība" class="d-block mx-auto">
+						</picture>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -483,16 +489,18 @@
 			<div class="row">
 				<div class="col-12">
 					<ul>
-						<li>Mikroģeneratora pieslēgšanas pieteikums klientu portālā <a target="_blank"
+						<li data-aos="fade-up">Mikroģeneratora pieslēgšanas pieteikums klientu portālā <a
+								target="_blank"
 								href="https://www.e-st.lv/lv/private/pieteikt-pakalpojumu/st-pieslegumi/mikrogeneratora-pieslegsana-1/jauna-mikrogeneratora-pieslegsana/step/1"
 								rel="noreferrer" class="fw-bold">e-st.lv</a>
 						</li>
-						<li>Mikroģeneratora pieslēgšana <a target="_blank"
+						<li data-aos="fade-up">Mikroģeneratora pieslēgšana <a target="_blank"
 								href="https://sadalestikls.lv/lv/mikrogeneratora-pieslegsana" rel="noreferrer"
 								class="fw-bold">sadalestikls.lv</a>
 						</li>
-						<li>SIA Energo dizains mājaslapa <a target="_blank" href="https://www.energodizains.lv/"
-								rel="noreferrer" class="fw-bold">energodizains.lv</a>
+						<li data-aos="fade-up">SIA Energo dizains mājaslapa <a target="_blank"
+								href="https://www.energodizains.lv/" rel="noreferrer"
+								class="fw-bold">energodizains.lv</a>
 						</li>
 					</ul>
 				</div>
@@ -522,23 +530,23 @@
 				{% csrf_token %}
 				<div class="row gx-0">
 					<div class="col-12 col-md-6">
-						<div data-aos="fade-right" data-aos-offset="200">
+						<div data-aos="fade-right" data-aos-offset="0">
 							{{ form.name }}
 						</div>
 						<div data-aos="fade-right" data-aos-offset="100">
 							{{ form.sender }}
 						</div>
-						<div data-aos="fade-right" data-aos-offset="0">
+						<div data-aos="fade-right" data-aos-offset="200">
 							{{ form.subject }}
 						</div>
 					</div>
 					<div class="col-12 col-md-6">
-						<div data-aos="fade-left" data-aos-offset="200">
+						<div data-aos="fade-left" data-aos-offset="300">
 							{{ form.content }}
 						</div>
 					</div>
 					<div class="col-12">
-						<div data-aos="fade-up" data-aos-offset="200">
+						<div data-aos="fade-up" data-aos-offset="400">
 							{{ form.captcha }}
 							<button type="submit" disabled="disabled" id="submitButton"
 								class="btn btn-dark d-block mx-auto my-2">Nosūtīt</button>
