@@ -32,22 +32,15 @@ def send(request):
     if request.method == 'POST':
         form = ContactForm(data=request.POST)
         if form.is_valid():
-            if restricted_found(form.cleaned_data['name']):
-                messages.warning(
-                    request, "Jūs ievadījāt kaut ko neatļautu! Mēģiniet vēlreiz.")
-                return redirect('/#contact_us')
-            elif restricted_found(form.cleaned_data['subject']):
-                messages.warning(
-                    request, "Jūs ievadījāt kaut ko neatļautu! Mēģiniet vēlreiz.")
-                return redirect('/#contact_us')
-            elif restricted_found(form.cleaned_data['content']):
+            if any(restricted_found(form.cleaned_data[field]) for field in ['name', 'subject', 'content']):
                 messages.warning(
                     request, "Jūs ievadījāt kaut ko neatļautu! Mēģiniet vēlreiz.")
                 return redirect('/#contact_us')
             html_content = render_to_string('email.html', {
-                                            'name': form.cleaned_data['name'],
-                                            'sender': form.cleaned_data['sender'],
-                                            'content': form.cleaned_data['content']})
+                'name': form.cleaned_data['name'],
+                'sender': form.cleaned_data['sender'],
+                'content': form.cleaned_data['content']
+            })
             text_content = strip_tags(html_content)
             try:
                 email = EmailMultiAlternatives(
