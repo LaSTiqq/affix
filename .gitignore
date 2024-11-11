@@ -18,5 +18,4 @@
 templates/robots.txt
 affix/settings.py
 affix/static
-.vscode
 venv
