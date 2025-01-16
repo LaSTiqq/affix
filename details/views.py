@@ -54,11 +54,11 @@ def send(request):
                 messages.success(request, "Vēstule nosūtīta")
                 return redirect('/#contact_us')
             except SMTPException:
-                messages.error(
+                messages.danger(
                     request, "Radās kļūda! Mēģiniet vēlreiz.")
                 return redirect('/#contact_us')
         else:
-            messages.error(
+            messages.warning(
                 request, "Captcha nebija izieta! Mēģiniet vēlreiz.")
             return redirect('/#contact_us')
     else:
