@@ -79,3 +79,11 @@ function enable() {
 function disable() {
   document.getElementById("submitButton").disabled = true;
 }
+
+// AOS animation
+AOS.init({
+  disable: window.innerWidth < 1399,
+  startEvent: "DOMContentLoaded",
+  once: true,
+  duration: 800,
+});
