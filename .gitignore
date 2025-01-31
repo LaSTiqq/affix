@@ -15,9 +15,9 @@
 *.wmv
 
 # Self
-templates/robots.txt
 affix/settings.py
 affix/static
 details/utils.py
 keywords.json
 venv
+.env
