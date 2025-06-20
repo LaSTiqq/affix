@@ -6,15 +6,15 @@ from django_recaptcha.widgets import ReCaptchaV2Checkbox
 
 class ContactForm(forms.Form):
     name = forms.CharField(label='Vārds', widget=forms.TextInput(attrs={
-        'class': 'form-control bg-transparent ms-auto mt-2', 'placeholder': 'Vārds', 'autocomplete': 'off', 'maxlength': '10'}),
-        min_length=5)
+        'id': 'name', 'value': 'Jānis', 'class': 'form-control bg-transparent ms-auto mt-2', 'placeholder': 'Vārds', 'autocomplete': 'off', 'maxlength': '10'}),
+        min_length=3)
     sender = forms.EmailField(label='E-pasts', widget=forms.EmailInput(attrs={
-        'class': 'form-control bg-transparent ms-auto mt-2', 'placeholder': 'E-pasts', 'autocomplete': 'off'}))
+        'id': 'email', 'value': 'janis.celotajs@gmail.com', 'class': 'form-control bg-transparent ms-auto mt-2', 'placeholder': 'E-pasts', 'autocomplete': 'off'}))
     subject = forms.CharField(label='Temats', widget=forms.TextInput(attrs={
-        'class': 'form-control bg-transparent ms-auto mt-2', 'placeholder': 'Temats', 'autocomplete': 'off', 'maxlength': '25'}),
+        'id': 'subject', 'value': 'Darba iespējas', 'class': 'form-control bg-transparent ms-auto mt-2', 'placeholder': 'Temats', 'autocomplete': 'off', 'maxlength': '25'}),
         min_length=5)
     content = forms.CharField(label='Teksts', widget=forms.Textarea(attrs={
-        'class': 'form-control bg-transparent me-auto ms-md-2 mt-2 pt-3', 'placeholder': 'Teksts', 'autocomplete': 'off', 'rows': 5}),
+        'id': 'message', 'value': 'Ziņojums', 'class': 'form-control bg-transparent me-auto mt-2', 'placeholder': 'Ziņojums', 'autocomplete': 'off'}),
         min_length=50)
     captcha = ReCaptchaField(
         label='Captcha',

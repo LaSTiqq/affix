@@ -559,27 +559,63 @@
 				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Aizvērt"></button>
 			</div>
 			{% endfor %}
-			<form method="post" class="d-flex justify-content-center">
+			<form method="post" class="d-flex justify-content-center was-validated">
 				{% csrf_token %}
-				<div class="row gx-0">
+				<div class="row">
 					<div class="col-12 col-md-6">
-						<div data-aos="fade-right" data-aos-offset="0">
-							{{ form.name }}
+						<div data-aos="fade-right" data-aos-offset="100">
+							<div class="form-floating">
+								{{ form.name }}
+								<label for="name">Vārds<span class="text-danger">*</span></label>
+								<div class="valid-feedback">
+									OK!
+								</div>
+								<div class="invalid-feedback">
+									Lūdzu, ievadiet derīgu vārdu!
+								</div>
+							</div>
 						</div>
 						<div data-aos="fade-right" data-aos-offset="100">
-							{{ form.sender }}
+							<div class="form-floating">
+								{{ form.sender }}
+								<label for="email">E-pasts<span class="text-danger">*</span></label>
+								<div class="valid-feedback">
+									OK!
+								</div>
+								<div class="invalid-feedback">
+									Lūdzu, ievadiet derīgu e-pasta adresi!
+								</div>
+							</div>
 						</div>
-						<div data-aos="fade-right" data-aos-offset="200">
-							{{ form.subject }}
+						<div data-aos="fade-right" data-aos-offset="100">
+							<div class="form-floating">
+								{{ form.subject }}
+								<label for="subject">Temats<span class="text-danger">*</span></label>
+								<div class="valid-feedback">
+									OK!
+								</div>
+								<div class="invalid-feedback">
+									Lūdzu, ievadiet derīgu tematu!
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="col-12 col-md-6">
-						<div data-aos="fade-left" data-aos-offset="300">
-							{{ form.content }}
+						<div data-aos="fade-left" data-aos-offset="200">
+							<div class="form-floating">
+								{{ form.content }}
+								<label for="message">Ziņojums<span class="text-danger">*</span></label>
+								<div class="valid-feedback">
+									OK!
+								</div>
+								<div class="invalid-feedback">
+									Lūdzu, ievadiet derīgu ziņu vismaz 50 simbolu garumā!
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="col-12">
-						<div data-aos="fade-up" data-aos-offset="400">
+						<div data-aos="fade-up" data-aos-offset="200">
 							{{ form.captcha }}
 							<button type="submit" disabled="disabled" id="submitButton"
 								class="btn btn-dark d-block mx-auto my-2">Nosūtīt</button>
