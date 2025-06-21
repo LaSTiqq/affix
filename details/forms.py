@@ -14,8 +14,8 @@ class ContactForm(forms.Form):
         'id': 'subject', 'value': 'Darba iespējas', 'class': 'form-control bg-transparent ms-auto mt-2', 'placeholder': 'Temats', 'autocomplete': 'off', 'maxlength': '25'}),
         min_length=5)
     content = forms.CharField(label='Teksts', widget=forms.Textarea(attrs={
-        'id': 'message', 'value': 'Ziņojums', 'class': 'form-control bg-transparent me-auto mt-2', 'placeholder': 'Ziņojums', 'autocomplete': 'off'}),
-        min_length=50)
+        'id': 'message', 'class': 'form-control bg-transparent me-auto mt-2', 'placeholder': 'Ziņojums', 'autocomplete': 'off'}),
+        min_length=20)
     captcha = ReCaptchaField(
         label='Captcha',
         widget=ReCaptchaV2Checkbox(
