@@ -2,6 +2,7 @@ from django.views.decorators.http import require_POST, require_GET
 from django.template.loader import render_to_string
 from django.core.mail import EmailMultiAlternatives
 from django.shortcuts import render
+from django.http import HttpResponse
 from django.http import JsonResponse
 from django.conf import settings
 from smtplib import SMTPException
@@ -56,3 +57,16 @@ def send_ajax(request):
             "status": "warning",
             "message": "Captcha netika izpildīta! Lūdzu, mēģiniet vēlreiz."
         }, status=500)
+
+
+@require_POST
+def accept_cookies(request):
+    response = HttpResponse("Cookie Accepted")
+    response.set_cookie(
+        key="cookie_accepted",
+        value="true",
+        max_age=31536000,
+        secure=True,
+        samesite="Lax",
+    )
+    return response
