@@ -71,14 +71,6 @@ navbarLinks.forEach((link) => {
   });
 });
 
-// Disable/enable submit form button if captcha is/not verified
-function enable() {
-  document.getElementById("submitButton").disabled = false;
-}
-
-function disable() {
-  document.getElementById("submitButton").disabled = true;
-}
 
 // AOS animation
 AOS.init({
@@ -88,7 +80,30 @@ AOS.init({
   duration: 800,
 });
 
-//AJAX form submission
+// Cookie
+document.getElementById("accept-cookies")?.addEventListener("click", () => {
+  const csrfToken = document
+    .querySelector('meta[name="csrf-token"]')
+    .getAttribute("content");
+
+  fetch("/accept-cookies/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRFToken": csrfToken,
+    },
+    body: JSON.stringify({ accepted: true }),
+  }).then((response) => {
+    if (response.ok) {
+      const notification = document.getElementById("cookie-notification");
+      notification.style.transition = "0.5s";
+      notification.style.opacity = "0";
+      notification.style.visibility = "hidden";
+    }
+  });
+});
+
+// AJAX form submission
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("form");
   const loader = document.getElementById("loader");
@@ -131,9 +146,18 @@ document.addEventListener("DOMContentLoaded", () => {
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Aizvērt"></button>
   `;
 
-    setTimeout(() => {
-      alert.classList.add("d-none");
-      alert.className = "alert d-none";
+  setTimeout(() => {
+    alert.classList.add("d-none");
+    alert.className = "alert d-none";
     }, 4000);
   }
 });
+
+// Disable/enable submit form button if captcha is/not verified
+function enable() {
+  document.getElementById("submitButton").disabled = false;
+}
+
+function disable() {
+  document.getElementById("submitButton").disabled = true;
+}
