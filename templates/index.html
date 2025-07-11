@@ -553,13 +553,11 @@
 					Raksti pa taisno, vai izmanto formu zemāk.</h3>
 			</div>
 			<hr class="my-3 my-lg-4">
-			{% for message in messages %}
-			<div class="alert alert-{{ message.tags }} alert-dismissible rounded-pill fw-bold" role="alert">
-				{{ message }}
-				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Aizvērt"></button>
+			<div id="loader" class="text-center d-none">
+				<div class="spinner-grow text-dark mb-2" role="status" aria-hidden="true"></div>
 			</div>
-			{% endfor %}
-			<form method="post" class="d-flex justify-content-center was-validated">
+			<div id="alert" class="d-none" role="alert"></div>
+			<form method="post" class="d-flex justify-content-center was-validated" id="form">
 				{% csrf_token %}
 				<div class="row">
 					<div class="col-12 col-md-6">
@@ -577,7 +575,7 @@
 						</div>
 						<div data-aos="fade-right" data-aos-offset="100">
 							<div class="form-floating">
-								{{ form.sender }}
+								{{ form.email }}
 								<label for="email">E-pasts<span class="text-danger">*</span></label>
 								<div class="valid-feedback">
 									OK!
@@ -603,7 +601,7 @@
 					<div class="col-12 col-md-6">
 						<div data-aos="fade-left" data-aos-offset="200">
 							<div class="form-floating">
-								{{ form.content }}
+								{{ form.message }}
 								<label for="message">Ziņojums<span class="text-danger">*</span></label>
 								<div class="valid-feedback">
 									OK!
