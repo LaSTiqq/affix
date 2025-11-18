@@ -79,38 +79,6 @@ AOS.init({
   duration: 800,
 });
 
-// Cookie
-document.getElementById("accept-cookies")?.addEventListener("click", () => {
-  const csrfToken = document
-    .querySelector('meta[name="csrf-token"]')
-    .getAttribute("content");
-
-  fetch("/accept-cookies/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-CSRFToken": csrfToken,
-    },
-    body: JSON.stringify({ accepted: true }),
-  }).then((response) => {
-    if (response.ok) {
-      document.cookie =
-        "cookie_accepted=true; path=/; max-age=31536000; SameSite=Lax";
-      const notification = document.getElementById("cookie-notification");
-      notification.style.transition = "0.5s";
-      notification.style.opacity = "0";
-      notification.style.visibility = "hidden";
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const notification = document.getElementById("cookie-notification");
-  if (!document.cookie.includes("cookie_accepted=true")) {
-    notification?.classList.remove("d-none");
-  }
-});
-
 // AJAX form submission
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("form");
